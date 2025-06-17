@@ -18,10 +18,17 @@ class Place:
 
         self.__owner = owner #(User): User instance of who owns the place. This should be validated to ensure the owner exists.
 
+        self.reviews = [] #list for storing reviews
+        self.amenities = [] #list for storing amentities
 
-        self.__reviews = [] #list for storing reviews
-        self.__amenities = [] #list for storing amentities
 
+    def add_review(self, review):
+        """Add a review to the place."""
+        self.reviews.append(review)
+
+    def add_amenity(self, amenity):
+        """Add an amenity to the place."""
+        self.amenities.append(amenity)
 
     @property
     def latitude(self):
@@ -62,7 +69,6 @@ class Place:
     
     @description.setter
     def set_desctiption(self, description):
-        if description:
             self.__description = description
 
     @property
