@@ -14,7 +14,7 @@ class User:
             password: Password
             is_admin: Denotes if user is an administrator
         """
-        self.id = str(uuid.uuid4())
+        self.user_id = str(uuid.uuid4())
         self.created_at = datetime.now()
         self.updated_at = self.created_at
         self.set_first_name = first_name
