@@ -18,7 +18,7 @@ class Review:
         self.review_rating = review_rating
 
     def review_dict(self):
-        """Saves review data as a dictionary"""
+        """Returns review data as a dictionary"""
         return {
             'review_id': self.review_id,
             'user_id': self.user_id,
