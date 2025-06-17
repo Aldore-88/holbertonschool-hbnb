@@ -14,17 +14,30 @@ class Review:
         """Review data"""
         self.user_id = user_id
         self.place_id = place_id
-        self.review_comment = review_comment
-        self.review_rating = review_rating
+        self.set_review_comment = review_comment
+        self.set_review_rating = review_rating
 
-    def review_dict(self):
-        """Returns review data as a dictionary"""
-        return {
-            'review_id': self.review_id,
-            'user_id': self.user_id,
-            'place_id': self.place_id,
-            'review_rating': self.review_rating,
-            'review_comment': self.review_comment,
-            'created_at': self.created_at(),
-            'updated_at': self.updated_at()
-        }
+    @property
+    def review_comment(self):
+        return self.__review_comment
+
+    @review_comment.setter
+    def set_review_comment(self, review_comment):
+        if not isinstance(review_comment, str) or not review_comment.strip():
+            raise ValueError("Review comment is required and can't be empty")
+        else:
+            self.__review_comment = review_comment
+
+    @property
+    def review_rating(self):
+        return self.__review_rating
+
+    @review_rating.setter
+    def set_review_rating(self, review_rating):
+        if isinstance(review_rating, int):
+            self.__review_rating = review_rating
+        elif review_rating < 1 or review_rating > 5:
+            raise ValueError("Rating must be between 1 and 5")
+
+    def save(self):
+        self.updated_at = datetime.now()
