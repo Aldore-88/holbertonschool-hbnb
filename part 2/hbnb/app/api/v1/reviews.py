@@ -24,7 +24,7 @@ class ReviewList(Resource):
             return review, 201
         except:
             return 400
-        pass
+        # pass
 
     @api.response(200, 'List of reviews retrieved successfully')
     def get(self):
@@ -32,16 +32,16 @@ class ReviewList(Resource):
         # Placeholder for logic to return a list of all reviews
         list_reviews = facade.get_all_reviews()
         reviews = []
-        for review in all_reviews:
+        for review in list_reviews:
             reviews.append({
-                'user_id': str(user.id),
+                'id': str(review.id),
                 'rating': review.rating,
                 'text': review.text,
                 'place_id': review.place_id
             })
 
         return reviews, 200
-        pass
+        # pass
 
 @api.route('/<review_id>')
 class ReviewResource(Resource):
@@ -50,11 +50,20 @@ class ReviewResource(Resource):
     def get(self, review_id):
         """Get review details by ID"""
         # Placeholder for the logic to retrieve a review by ID
-        if review_id in review:
-            return review[review_id], 200
-        else:
-            return 404
-        pass
+        review = facade.get_review(review_id)
+        if not review:
+            return {'error': 'Review not found'}, 404
+
+        reviews = {
+            'id': str(review.id),
+            'rating': review.rating,
+            'text': review.text,
+            'user_id': review.user_id,
+            'place_id': review.place_id,
+        }
+
+        return reviews, 200
+        # pass
 
     @api.expect(review_model)
     @api.response(200, 'Review updated successfully')
@@ -62,30 +71,27 @@ class ReviewResource(Resource):
     @api.response(400, 'Invalid input data')
     def put(self, review_id):
         """Update a review's information"""
+        review_data = api.payload
         # Placeholder for the logic to update a review by ID
-        try:
-            if review_id in reviews:
-                review = api.payload
-                review['review_id'] = review_id
-                reviews[review_id] = review
-                return review, 200
-            elif review_id not in reviews:
-                return 404
-        except:
-            return 400
-        pass
+        reviews = facade.get_review(review_id)
+        if reviews:
+            try:
+                facade.update_review(review_id, review_data)
+            except ValueError:
+                return 400
+            return {'message': 'Review updated'}, 200
+        # pass
 
     @api.response(200, 'Review deleted successfully')
     @api.response(404, 'Review not found')
     def delete(self, review_id):
         """Delete a review"""
         # Placeholder for the logic to delete a review
-        if review_id in reviews:
-            del reviews[review_id]
-            return '', 200
-        else:
-            return 404
-        pass
+        try:
+            facade.delete_review(review_id)
+        except ValueError:
+            return {'error': "Review not found"}, 400
+        # pass
 
 @api.route('/places/<place_id>/reviews')
 class PlaceReviewList(Resource):
@@ -95,4 +101,4 @@ class PlaceReviewList(Resource):
         """Get all reviews for a specific place"""
         # Placeholder for logic to return a list of reviews for a place
         
-        pass
+        # pass
