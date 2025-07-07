@@ -19,11 +19,13 @@ class ReviewList(Resource):
     def post(self):
         """Register a new review"""
         # Placeholder for the logic to register a new review
+        review_data = api.payload
+        created_review = None
         try:
-            review = api.payload
-            return review, 201
-        except:
+            created_review = facade.create_review(review_data)
+        except ValueError:
             return 400
+        return {'id': str(created_review.id), 'message': 'Review created'}, 201
         # pass
 
     @api.response(200, 'List of reviews retrieved successfully')

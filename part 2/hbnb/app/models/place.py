@@ -97,7 +97,9 @@ class Place:
         #if there is owner then we check against owner from user
         self.__owner = owner
 
-
+    def add_review(self, review):
+        """Add a review to the place"""
+        self.reviews.append(review)
 
 """
 ##FOR LATER##
