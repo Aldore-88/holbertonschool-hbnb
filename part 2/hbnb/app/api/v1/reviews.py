@@ -23,8 +23,8 @@ class ReviewList(Resource):
         created_review = None
         try:
             created_review = facade.create_review(review_data)
-        except ValueError:
-            return 400
+        except ValueError as error:
+            return {'error': "Validation failed: {}".format(error)}, 400
         return {'id': str(created_review.id), 'message': 'Review created'}, 201
         # pass
 
@@ -102,5 +102,5 @@ class PlaceReviewList(Resource):
     def get(self, place_id):
         """Get all reviews for a specific place"""
         # Placeholder for logic to return a list of reviews for a place
-        
+        return facade.get_reviews_by_place(place_id)
         # pass
