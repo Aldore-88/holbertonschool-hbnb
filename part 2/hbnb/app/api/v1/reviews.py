@@ -102,5 +102,6 @@ class PlaceReviewList(Resource):
     def get(self, place_id):
         """Get all reviews for a specific place"""
         # Placeholder for logic to return a list of reviews for a place
-        return facade.get_reviews_by_place(place_id)
+
         # pass
+        return facade.get_reviews_by_place(place_id)
