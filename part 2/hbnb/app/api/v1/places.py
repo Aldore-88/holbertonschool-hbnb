@@ -1,7 +1,7 @@
 from flask_restx import Namespace, Resource, fields
 from app.services import facade
 
-api = Namespace('users', description='Place operations')
+api = Namespace('places', description='Place operations')
 
 # Define the models for related entities
 amenity_model = api.model('PlaceAmenity', {
@@ -39,23 +39,20 @@ class PlaceList(Resource):
 
         #checking if user exists
         user = facade.get_user(str(place_data.get('owner_id')))#owner_id of place??
-        if not user:
-            return { 'error': "Invalid input data - user does not exist" }, 400
 
         new_place_data = None
 
-        input_place = {
-            'id': str(new_place_data.id),
-            "title": new_place_data.title,
-            "description": new_place_data.description,
-            "price": new_place_data.price,
-            'latitude': new_place_data.latitude,
-            'longitude': new_place_data.longitude,
-            "owner_id": new_place_data.owner.id
-        }
+        new_place = facade.create_place(place_data) #used later??
+        return {
+            'title': new_place.title,
+            'description': new_place.description,
+            'price': new_place.price,
+            'latitude': new_place.latitude,
+            'longitude': new_place.longitude,
+            'owner_id': new_place.owner_id,
+            # 'amenities': new_place.amenities
+            }
 
-        new_place = facade.creat_place(input_place) #used later??
-        return input_place
 
     #@api.marshal_list_with(place_model)
     @api.response(200, 'List of places retrieved successfully')
@@ -63,7 +60,6 @@ class PlaceList(Resource):
     def get(self):
         """Retrieve a list of all places"""
         # Placeholder for logic to return a list of all places
-
         return facade.get_place_all()
 
 @api.route('/<place_id>')
@@ -102,3 +98,10 @@ class PlaceResource(Resource):
         }
 
         return input_place
+
+
+"""
+curl -X POST localhost:5000/places -H "Content-Type: application/json" -d {"'title': "Test_title", 'description': "Test_descrption", 'price': 101001, 'latitude': 34.3424, 'longitude': 3.1415, 'owner_id': "1235577", 'amenities': "toilet"}
+
+
+"""
