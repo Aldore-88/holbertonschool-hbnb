@@ -37,13 +37,14 @@ class PlaceList(Resource):
         #error check for invalid input?
         #error check for key not found?
 
-
         #checking if user exists
-        user = facade.get_user(str(place_data.get('owner_id')))
+        user = facade.get_user(str(place_data.get('owner_id')))#owner_id of place??
         if not user:
             return { 'error': "Invalid input data - user does not exist" }, 400
 
         @api.response(200, 'List of places retrieved successfully')
+
+        
 
     def get(self):
         """Retrieve a list of all places"""
