@@ -50,7 +50,7 @@ class PlaceList(Resource):
             'latitude': new_place.latitude,
             'longitude': new_place.longitude,
             'owner_id': new_place.owner_id,
-            # 'amenities': new_place.amenities
+            'amenities': new_place.amenities
             }
 
 
@@ -89,19 +89,25 @@ class PlaceResource(Resource):
 
         input_place = {
             'id': str(place_data.id),
-            "title": place_data.title,
-            "description": place_data.description,
-            "price": place_data.price,
+            'title': place_data.title,
+            'description': place_data.description,
+            'price': place_data.price,
             'latitude': place_data.latitude,
             'longitude': place_data.longitude,
-            "owner_id": place_data.owner.id
+            'owner_id': place_data.owner.id
         }
 
         return input_place
 
 
 """
-curl -X POST localhost:5000/places -H "Content-Type: application/json" -d {"'title': "Test_title", 'description': "Test_descrption", 'price': 101001, 'latitude': 34.3424, 'longitude': 3.1415, 'owner_id': "1235577", 'amenities': "toilet"}
+curl -X POST localhost:5000/api/v1/places -H "Content-Type: application/json" -d {'title': "Test_title", 'description': "Test_descrption", 'price': 101001, 'latitude': 34.3424, 'longitude': 3.1415, 'owner_id': "1235577", 'amenities': "toilet"}
 
+curl -X POST http://127.0.0.1:5000/api/v1/places/ -H "Content-Type: application/json" -d '{"title": "Test_title", "description": "Test_description", "price": 101001, "latitude": 34.3424, "longitude": 3.1415, "owner_id": "1235577", "amenities": "toilet"}'
+
+
+curl -X POST localhost:5000/api/v1/places/ Content-Type: application/json {"title": "Cozy Apartment", "description": "A nice place to stay", "price": 100.0, "latitude": 37.7749, "longitude": -122.4194, "owner_id": "3fa85f64-5717-4562-b3fc-2c963f66afa6"}
+
+curl -X POST http://127.0.0.1:5000/api/v1/places/ -H "Content-Type: application/json" -d '{"title": "Beautiful Beach House", "description": "A stunning beachfront property with amazing ocean views", "price": 250, "latitude": 34.3424, "longitude": 3.1415, "owner_id": "95b937a6-e42b-4a15-ac6a-4e000962bc6b", "amenities": ["wifi", "parking", "pool"]}'
 
 """

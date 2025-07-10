@@ -47,3 +47,11 @@ class UserResource(Resource):
         if not user:
             return {'error': 'User not found'}, 404
         return {'id': user.id, 'first_name': user.first_name, 'last_name': user.last_name, 'email': user.email}, 200
+
+
+"""
+curl -X GET http://127.0.0.1:5000/api/v1/users/####USER ID####
+
+curl -X POST http://127.0.0.1:5000/api/v1/users/ -H "Content-Type: application/json" -d '{"first_name": "John","last_name": "Doe", "email": "john.doe@example.com"}'
+
+"""
