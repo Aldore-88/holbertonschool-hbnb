@@ -42,14 +42,29 @@ class PlaceList(Resource):
         if not user:
             return { 'error': "Invalid input data - user does not exist" }, 400
 
-        @api.response(200, 'List of places retrieved successfully')
+        new_place_data = None
 
-        
+        input_place = {
+            'id': str(new_place_data.id),
+            "title": new_place_data.title,
+            "description": new_place_data.description,
+            "price": new_place_data.price,
+            'latitude': new_place_data.latitude,
+            'longitude': new_place_data.longitude,
+            "owner_id": new_place_data.owner.id
+        }
+
+        new_place = facade.creat_place(input_place) #used later??
+        return input_place
+
+    #@api.marshal_list_with(place_model)
+    @api.response(200, 'List of places retrieved successfully')
 
     def get(self):
         """Retrieve a list of all places"""
         # Placeholder for logic to return a list of all places
-        pass
+
+        return facade.get_place_all()
 
 @api.route('/<place_id>')
 class PlaceResource(Resource):
@@ -58,7 +73,10 @@ class PlaceResource(Resource):
     def get(self, place_id):
         """Get place details by ID"""
         # Placeholder for the logic to retrieve a place by ID, including associated owner and amenities
-        pass
+        place = facade.get_place(place_id)
+        if not place:
+            return {"error": "Place id not found"}, 404
+        return place
 
     @api.expect(place_model)
     @api.response(200, 'Place updated successfully')
@@ -67,4 +85,20 @@ class PlaceResource(Resource):
     def put(self, place_id):
         """Update a place's information"""
         # Placeholder for the logic to update a place by ID
-        pass
+        place_data = api.payload #payload from client to update with
+
+        place = facade.update_place(place_id, place_data)
+        if not place:
+            return{'error': "Place not found"}, 404
+
+        input_place = {
+            'id': str(place_data.id),
+            "title": place_data.title,
+            "description": place_data.description,
+            "price": place_data.price,
+            'latitude': place_data.latitude,
+            'longitude': place_data.longitude,
+            "owner_id": place_data.owner.id
+        }
+
+        return input_place
