@@ -1,20 +1,20 @@
 import uuid
 from datetime import datetime
-from user import User
+#from user import User
 
 class Place:
     def __init__(self, title, description, price, latitude, longitude, owner):
         """what if one of the parameters are blank"""
 
-        self.place_id = str(uuid.uuid4()) #(String): Unique identifier for each place.
+        self.id = str(uuid.uuid4()) #(String): Unique identifier for each place.
         self.created_date = datetime.now() #(DateTime): Timestamp when the place is created.
         self.updated_date = datetime.now() #(DateTime): Timestamp when the place is last updated.
-        self.set_latitude = latitude #(Float): Latitude coordinate for the place location. Must be within the range of -90.0 to 90.0.
-        self.set_longitude = longitude #(Float): Longitude coordinate for the place location. Must be within the range of -180.0 to 180.0.
+        self.latitude = latitude #(Float): Latitude coordinate for the place location. Must be within the range of -90.0 to 90.0.
+        self.longitude = longitude #(Float): Longitude coordinate for the place location. Must be within the range of -180.0 to 180.0.
 
-        self.set_title = title #(String): The title of the place. Required, maximum length of 100 characters.
-        self.set_desc = description #(String): Detailed description of the place. Optional.
-        self.set_price = price #(Float): The price per night for the place. Must be a positive value.
+        self.title = title #(String): The title of the place. Required, maximum length of 100 characters.
+        self.description = description #(String): Detailed description of the place. Optional.
+        self.price = price #(Float): The price per night for the place. Must be a positive value.
 
         self.__owner = owner #(User): User instance of who owns the place. This should be validated to ensure the owner exists.
 
@@ -35,7 +35,7 @@ class Place:
         return self.__latitude
     
     @latitude.setter
-    def set_latitude(self, latitude):
+    def latitude(self, latitude):
         if latitude <= 90.0 and latitude >= -90.0:
             self.__latitude = latitude
         else:
@@ -45,7 +45,7 @@ class Place:
         return self.__longitude
     
     @longitude.setter
-    def set_longitude(self, longitude):
+    def longitude(self, longitude):
         if longitude <= 180.0 and longitude >= -180.0:
             self.__longitude = longitude
         else:
@@ -56,7 +56,7 @@ class Place:
         return self.__title
     
     @title.setter
-    def set_title(self, title):
+    def title(self, title):
         """setter for property title"""
         if not title or len(title.strip()) == 0 or len(title.strip()) > 100:
             raise ValueError("Title must be between 1 and 100 characters")
@@ -68,7 +68,7 @@ class Place:
         return self.__description
     
     @description.setter
-    def set_desctiption(self, description):
+    def desctiption(self, description):
             self.__description = description
 
     @property
@@ -76,7 +76,7 @@ class Place:
         return self.__price
     
     @price.setter
-    def set_price(self, price):
+    def price(self, price):
         if price < 0:
             raise ValueError("Price must be positive")
         elif not isinstance(price, (float, int)):
@@ -97,19 +97,19 @@ class Place:
         #if there is owner then we check against owner from user
         self.__owner = owner
 
-
-
-"""
-##FOR LATER##
-    def get_place(self, place_id):
-        # Placeholder for logic to retrieve a place by ID, including associated owner and amenities
-        pass
-
-    def get_all_places(self):
-        # Placeholder for logic to retrieve all places
-        pass
-
-    def update_place(self, place_id, place_data):
+##
+    def update(self, place_data):
         # Placeholder for logic to update a place
-        pass
-"""
+        allowed_keys = [
+            "title",
+            "description",
+            "price",
+            "latitude",
+            "longitude",
+            "amenities"
+        ]
+
+        for key, value in place_data.items():
+            if key in allowed_keys:
+                setattr(self, key, value)
+        return self
