@@ -36,6 +36,18 @@ class PlaceList(Resource):
         place_data = api.payload
         #error check for invalid input?
         #error check for key not found?
+        required_keys = [
+            'title',
+            'description',
+            'price',
+            'latitude',
+            'longitude',
+            'owner_id',
+        ]
+
+        for key, value in place_data.items():
+            if key not in required_keys:
+                return {'error': 'Invalid input data'}, 400
 
         #checking if user exists
         user = facade.get_user(str(place_data.get('owner_id')))#owner_id of place??
@@ -59,8 +71,24 @@ class PlaceList(Resource):
 
     def get(self):
         """Retrieve a list of all places"""
-        # Placeholder for logic to return a list of all places
-        return facade.get_place_all()
+        places = facade.get_place_all()
+
+        places_list = []
+
+        for place in places:
+            places_dict = {
+            'id': places.id,
+            'title': places.title,
+            'description': places.description,
+            'price': places.price,
+            'latitude': places.latitude,
+            'longitude': places.longitude,
+            'owner_id': places.owner_id,
+            'amenities': places.amenities
+            }
+
+            places_list.append(places_dict)
+        return places_list
 
 @api.route('/<place_id>')
 class PlaceResource(Resource):
@@ -68,7 +96,6 @@ class PlaceResource(Resource):
     @api.response(404, 'Place not found')
     def get(self, place_id):
         """Get place details by ID"""
-        # Placeholder for the logic to retrieve a place by ID, including associated owner and amenities
         place = facade.get_place(place_id)
         if not place:
             return {"error": "Place id not found"}, 404
@@ -80,7 +107,6 @@ class PlaceResource(Resource):
     @api.response(400, 'Invalid input data')
     def put(self, place_id):
         """Update a place's information"""
-        # Placeholder for the logic to update a place by ID
         place_data = api.payload #payload from client to update with
 
         place = facade.update_place(place_id, place_data)
