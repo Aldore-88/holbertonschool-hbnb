@@ -43,6 +43,7 @@ class PlaceList(Resource):
             'latitude',
             'longitude',
             'owner_id',
+            'amenities'
         ]
 
         for key, value in place_data.items():
@@ -50,9 +51,14 @@ class PlaceList(Resource):
                 return {'error': 'Invalid input data'}, 400
 
         #checking if user exists
-        user = facade.get_user(str(place_data.get('owner_id')))#owner_id of place??
+        user = facade.get_user(place_data['owner_id'])
+        if not user:
+            return {'error': 'Owner not found'}, 404
 
-        new_place_data = None
+        for amenity_id in place_data['amenities']:
+            amenity = facade.get_amenity(amenity_id)
+            if not amenity:
+                return {'error': 'Amenity not found'}, 404
 
         new_place = facade.create_place(place_data) #used later??
         return {
@@ -77,14 +83,14 @@ class PlaceList(Resource):
 
         for place in places:
             places_dict = {
-            'id': places.id,
-            'title': places.title,
-            'description': places.description,
-            'price': places.price,
-            'latitude': places.latitude,
-            'longitude': places.longitude,
-            'owner_id': places.owner_id,
-            'amenities': places.amenities
+            'id': place.id,
+            'title': place.title,
+            'description': place.description,
+            'price': place.price,
+            'latitude': place.latitude,
+            'longitude': place.longitude,
+            'owner_id': place.owner_id,
+            'amenities': place.amenities
             }
 
             places_list.append(places_dict)
@@ -113,17 +119,18 @@ class PlaceResource(Resource):
         if not place:
             return{'error': "Place not found"}, 404
 
-        input_place = {
-            'id': str(place_data.id),
-            'title': place_data.title,
-            'description': place_data.description,
-            'price': place_data.price,
-            'latitude': place_data.latitude,
-            'longitude': place_data.longitude,
-            'owner_id': place_data.owner.id
+        updated_place = {
+            'id': place.id,
+            'title': place.title,
+            'description': place.description,
+            'price': place.price,
+            'latitude': place.latitude,
+            'longitude': place.longitude,
+            'owner_id': place.owner.id,
+            'amenities': place.amenties,
         }
 
-        return input_place
+        return updated_place
 
 
 """
@@ -136,4 +143,5 @@ curl -X POST localhost:5000/api/v1/places/ Content-Type: application/json {"titl
 
 curl -X POST http://127.0.0.1:5000/api/v1/places/ -H "Content-Type: application/json" -d '{"title": "Beautiful Beach House", "description": "A stunning beachfront property with amazing ocean views", "price": 250, "latitude": 34.3424, "longitude": 3.1415, "owner_id": "95b937a6-e42b-4a15-ac6a-4e000962bc6b", "amenities": ["wifi", "parking", "pool"]}'
 
+curl -X POST http://127.0.0.1:5000/api/v1/places/ -H "Content-Type: application/json" -d '{"title": "Beautiful Beach House", "description": "A stunning beachfront property with amazing ocean views", "price": 250.0, "latitude": 34.3424, "longitude": 3.1415, "owner_id": "", "amenities": [""]}'
 """

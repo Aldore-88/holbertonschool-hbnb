@@ -3,7 +3,7 @@ from datetime import datetime
 #from user import User
 
 class Place:
-    def __init__(self, title, description, price, latitude, longitude, owner):
+    def __init__(self, title, description, price, latitude, longitude, owner_id, amenities):
         """what if one of the parameters are blank"""
 
         self.id = str(uuid.uuid4()) #(String): Unique identifier for each place.
@@ -16,24 +16,24 @@ class Place:
         self.description = description #(String): Detailed description of the place. Optional.
         self.price = price #(Float): The price per night for the place. Must be a positive value.
 
-        self.__owner = owner #(User): User instance of who owns the place. This should be validated to ensure the owner exists.
+        self.owner_id = owner_id #(User): User instance of who owns the place. This should be validated to ensure the owner exists.
 
         self.reviews = [] #list for storing reviews
-        self.amenities = [] #list for storing amentities
+        self.amenities = amenities #list for storing amentities
 
 
     def add_review(self, review):
         """Add a review to the place."""
         self.reviews.append(review)
 
-    def add_amenity(self, amenity):
-        """Add an amenity to the place."""
-        self.amenities.append(amenity)
+    # def add_amenity(self, amenity):
+    #     """Add an amenity to the place."""
+    #     self.amenities.append(amenity)
 
     @property
     def latitude(self):
         return self.__latitude
-    
+
     @latitude.setter
     def latitude(self, latitude):
         if latitude <= 90.0 and latitude >= -90.0:
@@ -43,7 +43,7 @@ class Place:
     @property
     def longitude(self):
         return self.__longitude
-    
+
     @longitude.setter
     def longitude(self, longitude):
         if longitude <= 180.0 and longitude >= -180.0:
@@ -54,7 +54,7 @@ class Place:
     @property
     def title(self):
         return self.__title
-    
+
     @title.setter
     def title(self, title):
         """setter for property title"""
@@ -66,15 +66,15 @@ class Place:
     @property
     def description(self):
         return self.__description
-    
+
     @description.setter
-    def desctiption(self, description):
-            self.__description = description
+    def description(self, description):
+        self.__description = description
 
     @property
     def price(self):
         return self.__price
-    
+
     @price.setter
     def price(self, price):
         if price < 0:
@@ -90,10 +90,10 @@ class Place:
     #    owner = User(first_name="Alice", last_name="Smith", email="alice.smith@example.com")
 
     @owner.setter
-    def set_owner(self, owner):
+    def owner(self, owner):
         #validate owner from users
         #???firstly if owner not there we set owner??????
-        
+
         #if there is owner then we check against owner from user
         self.__owner = owner
 

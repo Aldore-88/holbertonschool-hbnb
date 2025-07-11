@@ -67,3 +67,5 @@ class HBnBFacade:
     def update_place(self, place_id, place_data):
         self.place_repo.update(place_id, place_data)
         return self.get_place(place_id)
+
+facade = HBnBFacade()
