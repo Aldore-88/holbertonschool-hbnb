@@ -62,6 +62,7 @@ class PlaceList(Resource):
 
         new_place = facade.create_place(place_data) #used later??
         return {
+            'id': new_place.id,
             'title': new_place.title,
             'description': new_place.description,
             'price': new_place.price,
@@ -83,18 +84,18 @@ class PlaceList(Resource):
 
         for place in places:
             places_dict = {
-            'id': place.id,
-            'title': place.title,
-            'description': place.description,
-            'price': place.price,
-            'latitude': place.latitude,
-            'longitude': place.longitude,
-            'owner_id': place.owner_id,
-            'amenities': place.amenities
+                'id': place.id,
+                'title': place.title,
+                'description': place.description,
+                'price': place.price,
+                'latitude': place.latitude,
+                'longitude': place.longitude,
+                'owner_id': place.owner_id,
+                'amenities': place.amenities
             }
 
             places_list.append(places_dict)
-        return places_list
+        return {"places": places_list}
 
 @api.route('/<place_id>')
 class PlaceResource(Resource):
@@ -105,7 +106,16 @@ class PlaceResource(Resource):
         place = facade.get_place(place_id)
         if not place:
             return {"error": "Place id not found"}, 404
-        return place
+        return {
+            'id': place.id,
+            'title': place.title,
+            'description': place.description,
+            'price': place.price,
+            'latitude': place.latitude,
+            'longitude': place.longitude,
+            'owner_id': place.owner_id,
+            'amenities': place.amenities,
+        }
 
     @api.expect(place_model)
     @api.response(200, 'Place updated successfully')
@@ -126,22 +136,8 @@ class PlaceResource(Resource):
             'price': place.price,
             'latitude': place.latitude,
             'longitude': place.longitude,
-            'owner_id': place.owner.id,
-            'amenities': place.amenties,
+            'owner_id': place.owner_id,
+            'amenities': place.amenities,
         }
 
         return updated_place
-
-
-"""
-curl -X POST localhost:5000/api/v1/places -H "Content-Type: application/json" -d {'title': "Test_title", 'description': "Test_descrption", 'price': 101001, 'latitude': 34.3424, 'longitude': 3.1415, 'owner_id': "1235577", 'amenities': "toilet"}
-
-curl -X POST http://127.0.0.1:5000/api/v1/places/ -H "Content-Type: application/json" -d '{"title": "Test_title", "description": "Test_description", "price": 101001, "latitude": 34.3424, "longitude": 3.1415, "owner_id": "1235577", "amenities": "toilet"}'
-
-
-curl -X POST localhost:5000/api/v1/places/ Content-Type: application/json {"title": "Cozy Apartment", "description": "A nice place to stay", "price": 100.0, "latitude": 37.7749, "longitude": -122.4194, "owner_id": "3fa85f64-5717-4562-b3fc-2c963f66afa6"}
-
-curl -X POST http://127.0.0.1:5000/api/v1/places/ -H "Content-Type: application/json" -d '{"title": "Beautiful Beach House", "description": "A stunning beachfront property with amazing ocean views", "price": 250, "latitude": 34.3424, "longitude": 3.1415, "owner_id": "95b937a6-e42b-4a15-ac6a-4e000962bc6b", "amenities": ["wifi", "parking", "pool"]}'
-
-curl -X POST http://127.0.0.1:5000/api/v1/places/ -H "Content-Type: application/json" -d '{"title": "Beautiful Beach House", "description": "A stunning beachfront property with amazing ocean views", "price": 250.0, "latitude": 34.3424, "longitude": 3.1415, "owner_id": "", "amenities": [""]}'
-"""

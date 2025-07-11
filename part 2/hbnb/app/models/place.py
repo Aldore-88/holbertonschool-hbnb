@@ -86,16 +86,24 @@ class Place:
 
     @property
     def owner(self):
-        return self.__owner
+        return self.__owner_id
     #    owner = User(first_name="Alice", last_name="Smith", email="alice.smith@example.com")
 
     @owner.setter
-    def owner(self, owner):
+    def owner(self, owner_id):
         #validate owner from users
         #???firstly if owner not there we set owner??????
 
         #if there is owner then we check against owner from user
-        self.__owner = owner
+        self.__owner_id = owner_id
+
+    @property
+    def amenities(self):
+        return self.__amenities
+
+    @amenities.setter
+    def amenities(self, amenities):
+        self.__amenities = amenities
 
 ##
     def update(self, place_data):
