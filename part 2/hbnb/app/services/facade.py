@@ -1,19 +1,16 @@
 """Placeholder for Services facade.py"""
 from app.persistence.repository import InMemoryRepository
-<<<<<<< HEAD
 from app.models.user import User
 from app.models.amenity import Amenity
 from app.models.place import Place
-=======
 from app.models.review import Review
->>>>>>> isaac-branch
 
 class HBnBFacade:
     def __init__(self):
         self.user_repo = InMemoryRepository()
         self.amenity_repo = InMemoryRepository()
         self.place_repo = InMemoryRepository()
-        # self.review_repo = InMemoryRepository()
+        self.review_repo = InMemoryRepository()
 
 
     """
@@ -57,7 +54,6 @@ class HBnBFacade:
     PLACES
     """
     def get_place(self, place_id):
-<<<<<<< HEAD
         return self.place_repo.get(place_id)
 
     def get_place_all(self):
@@ -72,9 +68,8 @@ class HBnBFacade:
     def update_place(self, place_id, place_data):
         self.place_repo.update(place_id, place_data)
         return self.get_place(place_id)
-=======
         # Logic will be implemented in later tasks
-        pass
+        #pass
 
     """Review facade"""
     def create_review(self, review_data):
@@ -107,9 +102,9 @@ class HBnBFacade:
 
     def update_review(self, review_id, review_data):
         # Placeholder for logic to update a review
-        review_update = self.review_repo.get(review_id)
+        review_data = self.review_repo.get(review_id)
         """Placeholder Update review with the new review_data"""
-        return review_update
+        return review_data
         #pass
 
     def delete_review(self, review_id):
@@ -117,4 +112,3 @@ class HBnBFacade:
         return self.review_repo.delete(review_id)
     """Expecting Boolean"""
         #pass
->>>>>>> isaac-branch

@@ -20,11 +20,25 @@ class ReviewList(Resource):
         """Register a new review"""
         # Placeholder for the logic to register a new review
         review_data = api.payload
+        required_keys = ['text', 'rating', 'user_id', 'place_id']
         created_review = None
+        for key, value in review_data.items():
+            if key not in required_keys:
+                return {'error': 'Invalid input data'}, 400
+
+        user = facade.get_user(str(review_data.get('user_id')))
+        if not user:
+            return {'error': 'Not a valid user or user does not exist'}, 400
+
+        place = facade.get_place(str(review_data.get('place_id')))
+        if not place:
+            return {'error': 'Not a valid place or place does not exist'}, 400
+
         try:
             created_review = facade.create_review(review_data)
         except ValueError as error:
             return {'error': "Validation failed: {}".format(error)}, 400
+
         return {'id': str(created_review.id), 'message': 'Review created'}, 201
         # pass
 
