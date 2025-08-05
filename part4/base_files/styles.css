@@ -9,7 +9,12 @@ html {
     --color-black: #000000;
     --color-white: #ffffff;
     --color-beige: #EDE0D7;
+    --color-grey: #6D6D6D;
     --color-banner: #13284A;
+    --color-button: #45557B;
+    --color-background: #FFF7F5;
+    --opacity-reg: 0.8;
+    --opacity-log: 0.71;
     --text-color: var(--color-black);
     --font-family-base: "Song Myung";
     --font-serif: "Song Myung";
@@ -24,4 +29,14 @@ html {
     --line-height-small: 1.2;
     --line-height-base: 1.5;
     --line-height-big: 1.8;
+    --button-display: inline-block;
+    --button-padding: 1.5rem 3rem;
+    --button-border: 0.2rem solid var(--color-primary);
+    --button-color: var(--color-black);
+    --button-text-decoration: none;
+    --button-font-size: var(--font-size-large);
+    --button-hover-color: var(--color-white);
+    --button-hover-text-decoration: none;
+    --button-hover-background: var(--color-primary);
 }
+
