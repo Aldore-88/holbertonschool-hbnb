@@ -74,6 +74,17 @@ body, html {
     height: 100%;
 }
 
+.banner{
+    background-color: var(--color-banner);
+    height: 88px;
+}
+
+.banner > .banner-container{
+    padding-left: 25px;
+    padding-top: 3px;
+    width: auto;
+}
+
 .bg {
     background-image: url("images/cottage_lp.png");
     background-size: cover;
