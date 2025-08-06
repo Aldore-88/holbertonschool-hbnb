@@ -1,24 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nest</title>
     <link rel="icon" type="image/n-icon" href="images/nest_icon.ico">
     <link rel="icon" type="image/png" href="images/nest_icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Song+Myung&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <!-- Header -->
     <header>
+        <!-- Background Image-->
         <div class="bg">
-            <div class="-text">
-                <h1>cozy stays</h1>
-                <h1>just a</h1>
-                <img src="images/Nest_logo.png" alt="Nest logo" width="117" height="117">
-                <h1>away</h1>
-                <button>Log in</button>
-                <button>Register</button>
+            <!-- Slogan and Nest logo -->
+            <div class="text">
+                <div class="cosy">
+                    <span>Cozy stays,</span>
+                </div>
+                <div class="just">
+                    <span>just a</span>
+                </div>
+                <div class="nest">
+                    <div class="image"></div>
+                    <div class="away">
+                        <span>away</span>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons">
+                <!-- Log in and Register button -->
+                <button class="log-in-button">Log in</button>
+                <button class="register-button">Register</button>
             </div>
         </div>
     </header>
@@ -27,7 +46,8 @@
             <!-- Search Destination button -->
             <div class="search-destination">
                 <img class="icon" src="images/location_icon.png" alt="location icon">
-                <input class="search-input" type="search" id="destination" name="Search" placeholder="Search Destination" required>
+                <input class="search-input" type="search" id="destination" name="Search"
+                    placeholder="Search Destination" required>
             </div>
             <!-- Check-in button -->
             <div class="cicog-button">
@@ -37,7 +57,8 @@
             <!-- Check-out button-->
             <div class="cicog-button">
                 <img class="icon" src="images/calender_icon.png" alt="calender icon">
-                <input class="cicog-input" type="date" id="checkout" name="CheckOut" placeholder="Add Check-out" require>
+                <input class="cicog-input" type="date" id="checkout" name="CheckOut" placeholder="Add Check-out"
+                    require>
             </div>
             <!-- Number of Guests button -->
             <div class="cicog-button">
@@ -51,6 +72,7 @@
                 </button>
             </div>
         </div>
-        </main>
+    </main>
 </body>
+
 </html>
