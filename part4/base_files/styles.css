@@ -45,22 +45,94 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-serif);
 }
 
-/* body, html {
+body, html {
     height: 100%;
-} */
+}
 
 .bg {
-  background-image: url("images/cottage_lp.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
-  position: relative;
-  color: white;
+    background-image: url("images/cottage_lp.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+    color: white;
 } 
 
 
 .bg-text {
     text-align: center;
     color: var(--color-white)
+}
+
+.search-destination {
+    width: 212px;
+    height: 56px;
+    border-radius: 28px;
+    border: none;
+    background-color: var(--color-white);
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    gap: 8px;
+    box-sizing: border-box;
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    font-size: 12px;
+    width: 100%;
+    background: transparent;
+}
+
+.cicog-button {
+    width: 150px;
+    height: 56px;
+    border-radius: 28px;
+    border: none;
+    background-color: var(--color-white);
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    gap: 8px;
+    box-sizing: border-box;
+}
+
+.cicog-input {
+    border: none;
+    outline: none;
+    font-size: 12px;
+    width: 100%;
+    background: transparent;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+input[type="date"] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+.search-button {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--color-white);
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+}
+
+.icon {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    position: static;
 }
