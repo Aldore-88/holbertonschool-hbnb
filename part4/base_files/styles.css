@@ -16,7 +16,6 @@
     font-style: normal;
 }
 
-
 html {
     scroll-behavior:smooth;
     background-color: var(--color-background);
@@ -29,8 +28,12 @@ html {
     --color-grey: #6D6D6D;
     --color-banner: #13284A;
     --color-button: #45557B;
+    --color-button-light: #D1D4DB;
     --color-background: #FFF7F5;
+    --color-brown: #E2C7B8;
+    --color-light-brown: #EDE0D7;
     --text-color: var(--color-black);
+
     --font-family-base: "Song Myung";
     --font-serif: "Song Myung";
     --font-sans-serif: "Outfit";
@@ -41,18 +44,26 @@ html {
     --font-size-xx-large: 4.8rem;
     --font-weight-regular: 400;
     --font-weight-bold: 700;
+
     --line-height-small: 1.2;
     --line-height-base: 1.5;
     --line-height-big: 1.8;
+
+    --review-background-rating: var(--color-brown);
+    --place-filter-background: var(--color-light-brown);
+
     --button-display: inline-block;
     --button-padding: 1.5rem 3rem;
     --button-border: 0.2rem solid var(--color-primary);
     --button-color: var(--color-black);
+    --button-color-login: var(--color-button);
+    --button-color-register: var(--color-button-light)
     --button-text-decoration: none;
     --button-font-size: var(--font-size-large);
     --button-hover-color: var(--color-white);
     --button-hover-text-decoration: none;
     --button-hover-background: var(--color-primary);
+
 }
 
 h1, h2, h3, h4, h5, h6 {
