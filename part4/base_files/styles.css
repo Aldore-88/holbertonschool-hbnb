@@ -69,55 +69,35 @@ body, html {
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
-    position: relative;
+    position: static;
     color: white;
-} 
+}
 
-.text{
-    width: 17%;
+.li-button {
     border-radius: 9px;
     position: absolute;
-    top: 10%;
-    left: 15%;
-    font-family: "Song Myung", sans-serif;
-    font-size: 27px;
+    top: 50px;
+    right: 200px;
+    font-family: "Outfit", sans-serif;
+    font-size: 16px;
 }
 
-.text > .cosy {
-    margin-bottom: 10px;
-}
-
-.text > .just {
-    width: 20%;
-    float: left;
-}
-
-.text > .nest {
-    width: 80%;
-    float: right;
-}
-
-.text > .nest > .image {
-    width: 117px;
-    height: 65px;
-    display: inline-block;
-    background-image: url(./images/Nest_logo.png);
-    background-size: 120px 120px;
-    background-position: 0 -23px;
-}
-
-.text > .away {
-    width: 80%;
-    float: right;
-}
-
-.text > .buttons {
-    clear: both;
-}
-
-.bg-text {
+.log-in-button {
+    color: var(--color-white);
     text-align: center;
-    color: var(--color-white)
+}
+
+.reg-button {
+    border-radius: 9px;
+    position: absolute;
+    top: 50px;
+    right: 75px;
+    font-family: "Outfit", sans-serif;
+    font-size: 16px;
+}
+
+.register-button {
+    text-align: center;
 }
 
 .log-in-button {
@@ -133,6 +113,11 @@ body, html {
     gap: 8px;
     box-sizing: border-box;
     text-align: center;
+    font-weight: 640;
+}
+
+.log-in-button:hover {
+    opacity: 100%;
 }
 
 .register-button {
@@ -141,14 +126,64 @@ body, html {
     border-radius: 28px;
     border: none;
     background-color: var(--color-white);
-    opacity: 80%;
+    opacity: 70%;
     display: flex;
     align-items: center;
-    padding: 0 16px;
+    padding: 0 13px;
     gap: 8px;
     box-sizing: border-box;
     text-align: center;
+    font-weight: 600;
 }
+
+.register-button:hover {
+    opacity: 100%;
+}
+.text {
+    width: 17%;
+    border-radius: 9px;
+    position: absolute;
+    top: 180px;
+    left: 550px;
+    font-family: "Song Myung", sans-serif;
+    font-size: 27px;
+}
+
+.text > .cosy {
+    margin-bottom: 10px;
+}
+
+.text > .just {
+    float: left;
+}
+
+.text > .nest {
+    width: 80%;
+    float: right;
+}
+
+.text > .nest > .image {
+    width: 136px;
+    height: 78px;
+    display: inline-block;
+    background-image: url(./images/Nest_logo.png);
+    background-size: 150px 150px;
+    background-position: 0px -23px;
+}
+
+.text > .away {
+    float: left;
+}
+
+.text > .buttons {
+    clear: both;
+}
+
+.bg-text {
+    text-align: center;
+    color: var(--color-white)
+}
+
 
 .search-destination {
     width: 212px;
@@ -161,6 +196,7 @@ body, html {
     padding: 0 16px;
     gap: 8px;
     box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
 }
 
 .search-input {
@@ -169,6 +205,11 @@ body, html {
     font-size: 12px;
     width: 100%;
     background: transparent;
+    color: var(--color-black);
+}
+
+.search-input::placeholder {
+    color: var(--color-black);
 }
 
 .cicog-button {
@@ -182,6 +223,7 @@ body, html {
     padding: 0 16px;
     gap: 8px;
     box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
 }
 
 .cicog-input {
@@ -190,6 +232,11 @@ body, html {
     font-size: 12px;
     width: 100%;
     background: transparent;
+    color: var(--color-black);
+}
+
+.cicog-input::placeholder {
+    color: var(--color-black);
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
