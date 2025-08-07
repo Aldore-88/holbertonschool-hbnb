@@ -15,38 +15,44 @@
 </head>
 
 <body>
-    <div>
+    <div class="landing-page-container">
         <!-- Header -->
         <header>
-            <div class="bg">
-                <!-- Background Image-->
-                <div class="text">
-                    <!-- Slogan and Nest logo -->
-                    <div class="cozy">
-                        <span>Cozy stays,</span>
+        </header>
+        <main>
+            <div class="page-container">
+                <div class="bg">
+                    <div class="lireg-button">
+                        <div class="li-button">
+                            <!-- Log in button -->
+                            <div class="log-in-button">
+                                <button class="log-in-button" onclick="window.location.href='login.html'">Log in</button>
+                            </div>
+                        </div>
+                        <div class="reg-button">
+                            <!-- Register button -->
+                            <div class="register-button">
+                                <button class="register-button" onclick="window.location.href='register.html'">Register</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="just">
-                        <span>just a</span>
-                    </div>
-                    <div class="nest">
-                        <div class="image"></div>
-                        <span>away..</span>
+                    <!-- Background Image-->
+                    <div class="text">
+                        <!-- Slogan and Nest logo -->
+                        <div class="cozy">
+                            <span>Cozy stays,</span>
+                        </div>
+                        <div class="just">
+                            <span>just a</span>
+                        </div>
+                        <div class="nest">
+                            <div class="image"></div>
+                            <span>away..</span>
+                        </div>
                     </div>
                 </div>
-                <div class="li-button">
-                    <!-- Log in button -->
-                    <div class="log-in-button">
-                        <button class="log-in-button" onclick="window.location.href='login.html'">Log in</button>
-                    </div>
-                </div>
-                <div class="reg-button">
-                    <!-- Register button -->
-                    <div class="register-button">
-                        <button class="register-button" onclick="window.location.href='register.html'">Register</button>
-                    </div>
-                </div>
-                <div>
-                    <form class="search-destination-form">
+                <div class="form-input">
+                    <form class="input-fields">
                         <!-- Search Destination button -->
                         <div class="search-destination">
                             <img class="icon" src="images/location_icon.png" alt="location icon">
@@ -80,11 +86,10 @@
                     </form>
                 </div>
             </div>
-        </header>
-        <main>
         </main>
+
         <script src="scripts.js"></script>
-    </div>
+
 </body>
 
 </html>
