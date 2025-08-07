@@ -57,10 +57,26 @@ h1, h2, h3, h4, h5, h6 {
   height: 100vh;
   position: relative;
   color: white;
-} 
+}
 
 
 .bg-text {
     text-align: center;
     color: var(--color-white)
+}
+
+.mid-login {
+    font-family: var(--font-sans-serif);
+}
+
+#login-head {
+    font-family: var(--font-sans-serif);
+    font-weight: 600;
+}
+
+.form-fields {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    border-radius: 28px;
 }
