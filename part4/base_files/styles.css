@@ -191,7 +191,6 @@ template {
 
 .song-myung-regular {
     font-family: "Song Myung", serif;
-    font-weight: 400;
     font-style: normal;
 }
 
@@ -210,6 +209,7 @@ html {
     --color-banner: #13284A;
     --color-button: #45557B;
     --color-background: #FFF7F5;
+    --color-review: #e2c7b8;
     --text-color: var(--color-black);
     --font-family-base: "Song Myung";
     --font-serif: "Song Myung";
@@ -257,7 +257,7 @@ html {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 90vh;
     position: static;
 }
 
@@ -378,11 +378,6 @@ html {
     clear: both;
 }
 
-.bg-text {
-    text-align: center;
-    color: var(--color-white)
-}
-
 .input-fields {
     display: flex;
     justify-content: center;
@@ -390,7 +385,7 @@ html {
     flex-direction: row;
     align-content: space-between;
     gap: 1.25rem;
-    margin-top: -7.5%;
+    margin-top: -2%;
 }
 
 /* Search Destination Input */
@@ -478,4 +473,72 @@ input[type="date"] {
     height: 1.125rem;
     object-fit: contain;
     position: static;
+}
+
+.title-header {
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+.place-name {
+    display: flex;
+    width: 279px;
+    font-family: "Song Myung", sans-serif;
+    font-size: x-large;
+    margin-bottom: 5%;
+}
+
+.cottage1 {
+    width: 279px;
+    height: 279px;
+}
+
+.review-tile {
+    font-family: "Song Myung", sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.rating-score {
+    background-color: var(--color-review);
+    color: var(--color-black);
+    font-size: 25px;
+    padding: 10px 10px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.description {
+    width: 264px;
+    font-family: "Song Myung", sans-serif;
+    margin-top: 5%;
+}
+
+.rating-reviews {
+    color: var(--color-black);
+    font-size: 1rem;
+}
+
+.user-and-bath-icon {
+    display: flex;
+    gap: 10px;
+}
+
+.user-icon, .bath-icon {
+    display: flex;
+    align-items: space-between;
+    gap: 8px;
+    font-size: 1.2rem;
+    color: var(--color-black);
+    margin-top: 5%;
+}
+
+.main-page-tile {
+    display: flex;
+    gap: 8px;
+    margin-left: 5%;
+    width: 558px;
+    height: 279px;
 }
