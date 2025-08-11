@@ -492,6 +492,7 @@ input[type="date"] {
 .cottage1 {
     width: 279px;
     height: 279px;
+    border-radius: 10px;
 }
 
 .review-tile {
@@ -524,21 +525,34 @@ input[type="date"] {
 .user-and-bath-icon {
     display: flex;
     gap: 10px;
+    flex-direction: row;
+    align-items: space-between;
+    
 }
 
-.user-icon, .bath-icon {
+.user-icon, .bath-icon, .main-price {
     display: flex;
     align-items: space-between;
     gap: 8px;
     font-size: 1.2rem;
     color: var(--color-black);
-    margin-top: 5%;
 }
 
 .main-page-tile {
     display: flex;
     gap: 8px;
-    margin-left: 5%;
+    margin-top: 2%;
     width: 558px;
     height: 279px;
+}
+
+.tiles-main-page {
+    display: flex;
+    justify-content: space-evenly;
+    gap: row-gap;
+}
+
+.main-page-tile:hover {
+    opacity: 80%;
+    border-color: var(--color-banner);
 }
