@@ -331,8 +331,8 @@ html {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 90vh;
-    position: static;
+    height: 100vh;
+    position: relative;
 }
 
 .lireg-button {
@@ -599,6 +599,76 @@ input[type="date"] {
     bottom: 8px;
     width: 100%;
     text-align: center;
+    color: var(--color-white)
+}
+
+.log-container {
+    font-family: var(--font-sans-serif);
+}
+
+#login-head {
+    font-family: var(--font-sans-serif);
+    font-weight: 600;
+}
+
+/* .form-fields {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    border-radius: 28px;
+} */
+
+.log-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+.left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.input-container-log {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-container-log .icon {
+    position: absolute;
+    padding-left: 3px;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    align-items: center;
+    width: 18px;
+    height: 18px;
+    pointer-events: none;
+}
+
+.input-container-log input {
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    box-sizing: border-box;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 28px;
 }
 
 /* Number text (1/3 etc) */
