@@ -210,7 +210,6 @@ html {
     --color-button: #45557B;
     --color-button-light: #D1D4DB;
     --color-background: #FFF7F5;
-
     --color-brown: #E2C7B8;
     --color-light-brown: #EDE0D7;
 
@@ -239,7 +238,7 @@ html {
     --button-border: 0.2rem solid var(--color-primary);
     --button-color: var(--color-black);
     --button-color-login: var(--color-button);
-    --button-color-register: var(--color-button-light)
+    --button-color-register: var(--color-button-light);
     --button-text-decoration: none;
     --button-font-size: var(--font-size-large);
     --button-hover-color: var(--color-white);
@@ -332,7 +331,7 @@ html {
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
-    position: relative;
+    position: static;
 }
 
 .lireg-button {
@@ -591,7 +590,7 @@ input[type="date"] {
 }
 
 /* Caption text */
-.text {
+/* .text {
     color: #f2f2f2;
     font-size: 15px;
     padding: 8px 12px;
@@ -600,7 +599,7 @@ input[type="date"] {
     width: 100%;
     text-align: center;
     color: var(--color-white)
-}
+} */
 
 .log-container {
     font-family: var(--font-sans-serif);
@@ -705,6 +704,7 @@ input[type="date"] {
 @keyframes fade {
     from {opacity: .4}
     to {opacity: 1}
+}
 
 .title-header {
     display: flex;
@@ -734,7 +734,7 @@ input[type="date"] {
 }
 
 .rating-score {
-    background-color: var(--color-review);
+    background-color: var(--color-brown);
     color: var(--color-black);
     font-size: 25px;
     padding: 10px 10px;
@@ -757,24 +757,27 @@ input[type="date"] {
     display: flex;
     gap: 10px;
     flex-direction: row;
-    align-items: space-between;
-    
+    vertical-align: bottom;
 }
 
 .user-icon, .bath-icon, .main-price {
     display: flex;
     align-items: space-between;
     gap: 8px;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     color: var(--color-black);
+    font-family: "Song Myung", sans-serif;
 }
 
 .main-page-tile {
     display: flex;
     gap: 8px;
-    margin-top: 2%;
+    margin-top: 5%;
+    margin-bottom:2%;
     width: 558px;
     height: 279px;
+    background-color: var(--color-beige);
+    border-radius: 10px;
 }
 
 .tiles-main-page {
@@ -786,4 +789,93 @@ input[type="date"] {
 .main-page-tile:hover {
     opacity: 80%;
     border-color: var(--color-banner);
+}
+
+
+/* LISTING PAGE */
+/* LISTING PAGE */
+/* LISTING PAGE */
+
+.lireg-button-listing {
+    display: flex;
+    justify-content: right;
+    gap: 1.1rem;
+    padding: 1rem 2rem 0 0;
+    margin-top: -6.5%;
+}
+
+/* Log-in Button */
+.li-button-listing {
+    display: flex;
+    border-radius: 0.563rem;
+    font-family: "Outfit", sans-serif;
+    font-size: 1rem;
+}
+
+.log-in-button-listing {
+    color: var(--color-white);
+    text-align: center;
+}
+
+.log-in-button-listing {
+    display: flex;
+    width: 7.125rem;
+    height: 2.09rem;
+    border-radius: 1.75rem;
+    border: none;
+    background-color: var(--color-button);
+    opacity: 80%;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    gap: 0.5rem;
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: 640;
+}
+
+.log-in-button-listing:hover {
+    opacity: 100%;
+}
+
+/* Register Button */
+.reg-button-listing {
+    display: flex;
+    border-radius: 0.563rem;
+    font-family: "Outfit", sans-serif;
+    font-size: 1rem;
+}
+
+.register-button-listing {
+    text-align: center;
+}
+
+.register-button-listing {
+    display: flex;
+    width: 7.125rem;
+    height: 2.027rem;
+    border-radius: 1.75rem;
+    border: none;
+    background-color: var(--color-white);
+    opacity: 70%;
+    display: flex;
+    align-items: center;
+    padding: 0 0.813rem;
+    gap: 0.5rem;
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: 600;
+}
+
+.register-button-listing:hover {
+    opacity: 100%;
+}
+
+.listing-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4%;
+    font-family: "Song Myung", sans-serif;
+    font-size: 30px;
 }

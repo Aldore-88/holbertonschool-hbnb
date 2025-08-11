@@ -1,29 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Place Details</title>
+    <title>Nest</title>
+    <link rel="icon" type="image/n-icon" href="images/nest_icon.ico">
+    <link rel="icon" type="image/png" href="images/nest_icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Song+Myung&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+    <header>
+        <div class="banner">
+            <div class="banner-container">
+                <div class="banner-image">
+                    <a href="index.html">
+                        <img src="images/Nest_logo.png" width="80" height="80" alt="Nest Logo">
+                    </a>
+                    <div class="lireg-button-listing">
+                        <div class="li-button-listing">
+                            <!-- Log in button -->
+                            <div class="log-in-button-listing">
+                                <button class="log-in-button-listing" onclick="window.location.href='login.html'">Log
+                                    in</button>
+                            </div>
+                        </div>
+                        <div class="reg-button-listing">
+                            <!-- Register button -->
+                            <div class="register-button-listing">
+                                <button class="register-button-listing" onclick="window.location.href='register.html'">Register</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-input">
+                    <form class="input-fields">
+                        <!-- Search Destination button -->
+                        <div class="search-destination">
+                            <img class="icon" src="images/location_icon.png" alt="location icon">
+                            <input class="search-input" type="search" id="destination" name="Search"
+                                placeholder="Search Destination" required>
+                        </div>
+                        <!-- Check-in button -->
+                        <div class="cicog-button">
+                            <img class="icon" src="images/calender_icon.png" alt="calender icon">
+                            <input class="cicog-input" type="date" id="checkin" name="CheckIn"
+                                placeholder="Add Check-in" required>
+                        </div>
+                        <!-- Check-out button-->
+                        <div class="cicog-button">
+                            <img class="icon" src="images/calender_icon.png" alt="calender icon">
+                            <input class="cicog-input" type="date" id="checkout" name="CheckOut"
+                                placeholder="Add Check-out" require>
+                        </div>
+                        <!-- Number of Guests button -->
+                        <div class="cicog-button">
+                            <img class="icon" src="images/user_icon.png" alt="user icon">
+                            <input class="cicog-input" type="number" id="guests" name="Guests"
+                                placeholder="Add Guest(s)" require>
+                        </div>
+                        <!-- Search button -->
+                        <div>
+                            <button class="search-button">
+                                <img class="icon" src="images/search_icon.png" alt="search icon">
+                            </button>
+                        </div>
+                    </form>
+                </div>
+    </header>
     <main>
-        <section id="place-details">
-            <!-- Place details will be populated dynamically -->
-        </section>
-        <section id="reviews">
-            <!-- Reviews will be populated dynamically -->
-        </section>
-        <section id="add-review">
-            <h2>Add a Review</h2>
-            <form id="review-form">
-                <label for="review-text">Review:</label>
-                <textarea id="review-text" name="review-text" required></textarea>
-                
-                <button type="submit">Submit</button>
-            </form>
-        </section>
+        <span class="listing-header"><u>Places to stay in Falls Creek, Victoria, Australia.</u></span>
+        <div class="tiles-main-page">
+                <div class="main-page-tile" href="listing.html">
+                    <div>
+                        <img class="cottage1" src="images-listing/cottage1.jpg">
+                    </div>
+                    <div class="information">
+                        <span class="place-name">Cottage in Vancouver, Canada</span>
+                        <div class="review-tile">
+                            <span class="rating-score">9.4</span>
+                            <span class="rating-reviews">194 reviews</span>
+                        </div>
+                        <div class="description">
+                            <span>A cozy snow-covered cottage tucked away in the serene outskirts of Vancouver, Canada —
+                                perfect for
+                                a peaceful escape surrounded by evergreens, crisp mountain air, and the quiet magic of
+                                winter.
+                            </span>
+                        </div>
+                        <div class="user-and-bath-icon">
+                            <div class="user-icon">
+                                <img class="icon" src="images/user_icon.png">
+                                <span>4</span>
+                            </div>
+                            <div class="bath-icon">
+                                <img class="icon" src="images/bath_icon.png">
+                                <span>1.5</span>
+                            </div>
+                            <span class="main-price">$348.98 per night</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-page-tile">
+                    <div>
+                        <img class="cottage1" src="images-listing/cottage2.jpg">
+                    </div>
+                    <div class="information">
+                        <span class="place-name">Holiday Home in Mt Beauty, Victoria</span>
+                        <div class="review-tile">
+                            <span class="rating-score">9.8</span>
+                            <span class="rating-reviews">256 reviews</span>
+                        </div>
+                        <div class="description">
+                            <span>Cozy holiday home nestled in snowy woods, warm fireplace, panoramic mountain views, rustic charm, perfect for winter retreats, peaceful, inviting, nature-inspired escape.
+                            </span>
+                        </div>
+                        <div class="user-and-bath-icon">
+                            <div class="user-icon">
+                                <img class="icon" src="images/user_icon.png">
+                                <span>2</span>
+                            </div>
+                            <div class="bath-icon">
+                                <img class="icon" src="images/bath_icon.png">
+                                <span>1</span>
+                            </div>
+                            <span class="main-price">$421.67 per night</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tiles-main-page">
+                <div class="main-page-tile" href="listing.html">
+                    <div>
+                        <img class="cottage1" src="images-listing/cottage3.jpg">
+                    </div>
+                    <div class="information">
+                        <span class="place-name">Cottage in Vancouver, Canada</span>
+                        <div class="review-tile">
+                            <span class="rating-score">9.4</span>
+                            <span class="rating-reviews">194 reviews</span>
+                        </div>
+                        <div class="description">
+                            <span>A cozy snow-covered cottage tucked away in the serene outskirts of Vancouver, Canada —
+                                perfect for
+                                a peaceful escape surrounded by evergreens, crisp mountain air, and the quiet magic of
+                                winter.
+                            </span>
+                        </div>
+                        <div class="user-and-bath-icon">
+                            <div class="user-icon">
+                                <img class="icon" src="images/user_icon.png">
+                                <span>4</span>
+                            </div>
+                            <div class="bath-icon">
+                                <img class="icon" src="images/bath_icon.png">
+                                <span>1.5</span>
+                            </div>
+                            <span class="main-price">$348.98 per night</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-page-tile">
+                    <div>
+                        <img class="cottage1" src="images-listing/cottage4.jpg">
+                    </div>
+                    <div class="information">
+                        <span class="place-name">Holiday Home in Mt Beauty, Victoria</span>
+                        <div class="review-tile">
+                            <span class="rating-score">9.8</span>
+                            <span class="rating-reviews">256 reviews</span>
+                        </div>
+                        <div class="description">
+                            <span>Cozy holiday home nestled in snowy woods, warm fireplace, panoramic mountain views, rustic charm, perfect for winter retreats, peaceful, inviting, nature-inspired escape.
+                            </span>
+                        </div>
+                        <div class="user-and-bath-icon">
+                            <div class="user-icon">
+                                <img class="icon" src="images/user_icon.png">
+                                <span>2</span>
+                            </div>
+                            <div class="bath-icon">
+                                <img class="icon" src="images/bath_icon.png">
+                                <span>1</span>
+                            </div>
+                            <span class="main-price">$421.67 per night</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tiles-main-page">
+                <div class="main-page-tile" href="listing.html">
+                    <div>
+                        <img class="cottage1" src="images-listing/cottage5.jpg">
+                    </div>
+                    <div class="information">
+                        <span class="place-name">Cottage in Vancouver, Canada</span>
+                        <div class="review-tile">
+                            <span class="rating-score">9.4</span>
+                            <span class="rating-reviews">194 reviews</span>
+                        </div>
+                        <div class="description">
+                            <span>A cozy snow-covered cottage tucked away in the serene outskirts of Vancouver, Canada —
+                                perfect for
+                                a peaceful escape surrounded by evergreens, crisp mountain air, and the quiet magic of
+                                winter.
+                            </span>
+                        </div>
+                        <div class="user-and-bath-icon">
+                            <div class="user-icon">
+                                <img class="icon" src="images/user_icon.png">
+                                <span>4</span>
+                            </div>
+                            <div class="bath-icon">
+                                <img class="icon" src="images/bath_icon.png">
+                                <span>1.5</span>
+                            </div>
+                            <span class="main-price">$348.98 per night</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-page-tile">
+                    <div>
+                        <img class="cottage1" src="images-listing/cottage6.jpg">
+                    </div>
+                    <div class="information">
+                        <span class="place-name">Holiday Home in Mt Beauty, Victoria</span>
+                        <div class="review-tile">
+                            <span class="rating-score">9.8</span>
+                            <span class="rating-reviews">256 reviews</span>
+                        </div>
+                        <div class="description">
+                            <span>Cozy holiday home nestled in snowy woods, warm fireplace, panoramic mountain views, rustic charm, perfect for winter retreats, peaceful, inviting, nature-inspired escape.
+                            </span>
+                        </div>
+                        <div class="user-and-bath-icon">
+                            <div class="user-icon">
+                                <img class="icon" src="images/user_icon.png">
+                                <span>2</span>
+                            </div>
+                            <div class="bath-icon">
+                                <img class="icon" src="images/bath_icon.png">
+                                <span>1</span>
+                            </div>
+                            <span class="main-price">$421.67 per night</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </main>
     <script src="scripts.js"></script>
 </body>
+
 </html>
