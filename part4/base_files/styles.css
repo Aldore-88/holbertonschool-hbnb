@@ -330,7 +330,7 @@ html {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 95vh;
     position: static;
 }
 
@@ -458,7 +458,7 @@ html {
     flex-direction: row;
     align-content: space-between;
     gap: 1.25rem;
-    margin-top: -2%;
+    margin-top: -1.5%;
 }
 
 /* Search Destination Input */
@@ -758,6 +758,8 @@ input[type="date"] {
     gap: 10px;
     flex-direction: row;
     vertical-align: bottom;
+    position: absolute;
+    bottom: 10px;
 }
 
 .user-icon, .bath-icon, .main-price {
@@ -767,6 +769,10 @@ input[type="date"] {
     font-size: 0.9rem;
     color: var(--color-black);
     font-family: "Song Myung", sans-serif;
+}
+
+.information {
+    position: relative;
 }
 
 .main-page-tile {
@@ -801,7 +807,7 @@ input[type="date"] {
     justify-content: right;
     gap: 1.1rem;
     padding: 1rem 2rem 0 0;
-    margin-top: -6.5%;
+    margin-top: -4%;
 }
 
 /* Log-in Button */
