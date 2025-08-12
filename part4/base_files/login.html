@@ -11,26 +11,62 @@
 </head>
 <body>
     <main>
-        <div class="log-container">
+        <div class="page-container">
             <section class="left">
-                <div>
+                <div class="nest-container">
+                    <img src="images/nest_logo_cropped.png" alt="nest" class="nest-square">
+                </div>
+                <div class="login-main">
                     <p>YOUR COZY STAY AWAITS</p>
                     <h1 id="login-head">Log into Nest</h1>
                     <form id="login-form">
-                        <div class="input-container-log">
-                            <img class="icon" src="images/email_icon.png" alt="email icon">
-                            <input class="form-fields" type="email" id="email" name="email" placeholder="Your Email" required>
+
+                        <div class="email-containers">
+                            <p class="field-title">Email</p>
+                            <div class="input-container-log">
+                                <img class="log-icon" src="images/email_icon.png" alt="email icon">
+                                <input class="form-field" type="email" id="email" name="email" placeholder="Your Email" required>
+                            </div>
                         </div>
 
-                        <div class="input-container-log">
-                            <img class="icon" src="images/key_icon.png" alt="email icon">
-                            <input class="form-fields" type="password" id="password" name="password" placeholder=" Your Password" required>
+                        <div class="password-container">
+                            <p class="field-title">Password</p>
+                            <div class="input-container-log">
+                                <img class="log-icon" src="images/key_icon.png" alt="email icon">
+                                <input class="form-field" type="password" id="password" name="password" placeholder=" Your Password" required>
+                                <img class="toggle-password" src="images/eye_icon.png" alt="toggle password">
+                            </div>
                         </div>
 
-                        <button type="submit">Login</button>
+                        <div class="form-options">
+                            <div class="remember-me">
+                                <label>
+                                    <input type="checkbox" name="remember" />
+                                    <span>Remember me</span>
+                                </label>
+                            </div>
+                            <a href="#">Forgot Password?</a>
+                        </div>
+
+                        <button class="login-button" type="submit">Login</button>
                     </form>
+                    <div class="login-with">
+                        <hr>
+                        <span>Or login with</span>
+                        <hr>
+                    </div>
+                    <div class="social-icon">
+                        <img src="images/fb_icon.png" alt="Facebook" class="Facebook">
+                        <img src="images/x_icon.png" alt="Facebook" class="Facebook">
+                        <img src="images/google_icon.png" alt="Facebook" class="Facebook">
+                        <img src="images/apple_icon.png" alt="Facebook" class="Facebook">
+                    </div>
+                </div>
+                <div class="create-account">
+                    <span>New to Nest? <a href="register.html">Create Account</a></span>
                 </div>
             </section>
+
             <section class="right">
                 <div class="slideshow">
                     <img src="images/login_slide1.png" alt="Slideshow image" />
