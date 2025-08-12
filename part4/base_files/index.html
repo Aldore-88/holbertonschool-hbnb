@@ -15,64 +15,149 @@
 </head>
 
 <body>
-    <!-- Header -->
-    <header>
-        <!-- Background Image-->
-        <div class="bg">
-            <!-- Slogan and Nest logo -->
-            <div class="text">
-                <div class="cosy">
-                    <span>Cozy stays,</span>
+    <div class="landing-page-container">
+        <!-- Header -->
+        <header>
+            <div class="page-container">
+                <div class="bg">
+                    <div class="lireg-button">
+                        <div class="li-button">
+                            <!-- Log in button -->
+                            <div class="log-in-button">
+                                <button class="log-in-button" onclick="window.location.href='login.html'">Log
+                                    in</button>
+                            </div>
+                        </div>
+                        <div class="reg-button">
+                            <!-- Register button -->
+                            <div class="register-button">
+                                <button class="register-button"
+                                    onclick="window.location.href='register.html'">Register</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Background Image-->
+                    <div class="text">
+                        <!-- Slogan and Nest logo -->
+                        <div class="cozy">
+                            <span>Cozy stays,</span>
+                        </div>
+                        <div class="just">
+                            <span>just a</span>
+                        </div>
+                        <div class="nest">
+                            <div class="image"></div>
+                            <span>away..</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="just">
-                    <span>just a</span>
+                <div class="form-input">
+                    <form class="input-fields">
+                        <!-- Search Destination button -->
+                        <div class="search-destination">
+                            <img class="icon" src="images/location_icon.png" alt="location icon">
+                            <input class="search-input" type="search" id="destination" name="Search"
+                                placeholder="Search Destination" required>
+                        </div>
+                        <!-- Check-in button -->
+                        <div class="cicog-button">
+                            <img class="icon" src="images/calender_icon.png" alt="calender icon">
+                            <input class="cicog-input" type="date" id="checkin" name="CheckIn"
+                                placeholder="Add Check-in" required>
+                        </div>
+                        <!-- Check-out button-->
+                        <div class="cicog-button">
+                            <img class="icon" src="images/calender_icon.png" alt="calender icon">
+                            <input class="cicog-input" type="date" id="checkout" name="CheckOut"
+                                placeholder="Add Check-out" require>
+                        </div>
+                        <!-- Number of Guests button -->
+                        <div class="cicog-button">
+                            <img class="icon" src="images/user_icon.png" alt="user icon">
+                            <input class="cicog-input" type="number" id="guests" name="Guests"
+                                placeholder="Add Guest(s)" require>
+                        </div>
+                        <!-- Search button -->
+                        <div>
+                            <button class="search-button">
+                                <img class="icon" src="images/search_icon.png" alt="search icon">
+                            </button>
+                        </div>
+                    </form>
                 </div>
-                <div class="nest">
-                    <div class="image"></div>
-                    <div class="away">
-                        <span>away</span>
+            </div>
+        </header>
+        <main>
+            <div class="title-header">
+                <h1><u>Popular places to stay</u></h1>
+            </div>
+            <div class="tiles-main-page">
+                <div class="main-page-tile" href="listing.html">
+                    <div>
+                        <img class="cottage1" src="images/cottage1.jpg">
+                    </div>
+                    <div class="information">
+                        <span class="place-name">Cottage in Vancouver, Canada</span>
+                        <div class="review-tile">
+                            <span class="rating-score">9.4</span>
+                            <span class="rating-reviews">194 reviews</span>
+                        </div>
+                        <div class="description">
+                            <span>A cozy snow-covered cottage tucked away in the serene outskirts of Vancouver, Canada —
+                                perfect for
+                                a peaceful escape surrounded by evergreens, crisp mountain air, and the quiet magic of
+                                winter.
+                            </span>
+                        </div>
+                        <div class="user-and-bath-icon">
+                            <div class="user-icon">
+                                <img class="icon" src="images/user_icon.png">
+                                <span>4</span>
+                            </div>
+                            <div class="bath-icon">
+                                <img class="icon" src="images/bath_icon.png">
+                                <span>1.5</span>
+                            </div>
+                            <span class="main-price">$348.98 per night</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-page-tile">
+                    <div>
+                        <img class="cottage1" src="images/cottage2.jpg">
+                    </div>
+                    <div class="information">
+                        <span class="place-name">Holiday Home in Mt Beauty, Victoria</span>
+                        <div class="review-tile">
+                            <span class="rating-score">9.8</span>
+                            <span class="rating-reviews">256 reviews</span>
+                        </div>
+                        <div class="description">
+                            <span>Cozy holiday home nestled in snowy woods, warm fireplace, panoramic mountain views, rustic charm, perfect for winter retreats, peaceful, inviting, nature-inspired escape.
+                            </span>
+                        </div>
+                        <div class="user-and-bath-icon">
+                            <div class="user-icon">
+                                <img class="icon" src="images/user_icon.png">
+                                <span>2</span>
+                            </div>
+                            <div class="bath-icon">
+                                <img class="icon" src="images/bath_icon.png">
+                                <span>1</span>
+                            </div>
+                            <span class="main-price">$421.67 per night</span>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="buttons">
-                <!-- Log in and Register button -->
-                <button class="log-in-button">Log in</button>
-                <button class="register-button">Register</button>
-            </div>
-        </div>
-    </header>
-    <main>
-        <div>
-            <!-- Search Destination button -->
-            <div class="search-destination">
-                <img class="icon" src="images/location_icon.png" alt="location icon">
-                <input class="search-input" type="search" id="destination" name="Search"
-                    placeholder="Search Destination" required>
-            </div>
-            <!-- Check-in button -->
-            <div class="cicog-button">
-                <img class="icon" src="images/calender_icon.png" alt="calender icon">
-                <input class="cicog-input" type="date" id="checkin" name="CheckIn" placeholder="Add Check-in" required>
-            </div>
-            <!-- Check-out button-->
-            <div class="cicog-button">
-                <img class="icon" src="images/calender_icon.png" alt="calender icon">
-                <input class="cicog-input" type="date" id="checkout" name="CheckOut" placeholder="Add Check-out"
-                    require>
-            </div>
-            <!-- Number of Guests button -->
-            <div class="cicog-button">
-                <img class="icon" src="images/user_icon.png" alt="user icon">
-                <input class="cicog-input" type="number" id="guests" name="Guests" placeholder="Add Guest(s)" require>
-            </div>
-            <!-- Search button -->
-            <div>
-                <button class="search-button">
-                    <img class="icon" src="images/search_icon.png" alt="search icon">
-                </button>
-            </div>
-        </div>
+    </div>
     </main>
+
+    <footer>
+    </footer>
+
+    <script src="scripts.js"></script>
+
 </body>
 
 </html>
