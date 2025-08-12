@@ -268,12 +268,12 @@ h6 {
     font-family: var(--font-serif);
 }
 
-body,
-html {
+main, body, html {
     height: 100%;
-} */
+}
 
 .bg {
+    color: var(--color-white);
     background-image: url("images/cottage_lp.png");
     background-size: cover;
     background-position: center;
@@ -691,7 +691,152 @@ input[type="date"] {
     box-sizing: border-box;
     font-size: 1rem;
     border: 1px solid #ccc;
-    border-radius: 28px;
+    border-radius: 1.75rem;
+}
+
+#login-form {
+    width: 80%;
+}
+
+.field-title {
+    margin-bottom: 0.5rem;
+    padding-left: 0.7rem;
+}
+
+.field-container {
+    margin-bottom: -2%;
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0.5rem;
+}
+
+.form-options input {
+    border-radius: none;
+}
+
+.form-options a{
+    text-decoration: none;
+    color: inherit;
+    opacity: 0.5;
+}
+
+.form-options a:hover{
+    text-decoration: underline;
+}
+
+.remember-me span {
+    margin-left: 5px;
+}
+
+.login-button {
+    display: block;
+    margin: 2.688rem auto;
+    padding: 0.7rem 4rem;
+    box-sizing: border-box;
+    background-color: #45557B;
+    color: var(--color-background);
+    border: none;
+    border-radius: 1.75rem;
+    cursor: pointer;
+}
+
+/* Login With */
+.login-with {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  width: 85%;
+}
+
+.login-with hr {
+  flex: 1;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+.login-with span {
+    color: #000000;
+    opacity: 0.5;
+}
+
+/* Login With Register*/
+.login-with-reg {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  width: 85%;
+  margin-top: -5%;
+}
+
+.login-with-reg hr {
+  flex: 1;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+.login-with-reg span {
+    color: #000000;
+    opacity: 0.5;
+}
+
+/* Social Media Icons */
+.social-icon {
+    display: flex;
+    gap: 2rem;
+}
+
+.social-icon img {
+    margin-top: 10%;
+    width: 2rem;
+}
+
+/* Create Account */
+.create-account {
+    flex: 1;
+    align-items: center;
+    margin-top: 9%;
+}
+
+.create-account span {
+    color: var(--color-button);
+}
+
+.create-account a {
+    color: black;
+}
+
+.create-account a:hover {
+    color: #ccc;
+}
+
+.create-account a:visited {
+    color: none;
+}
+
+/* Login Account */
+.login-account {
+    flex: 1;
+    align-items: center;
+    margin-top: 3%;
+}
+
+.login-account span {
+    color: var(--color-button);
+}
+
+.login-account a {
+    color: black;
+}
+
+.login-account a:hover {
+    color: #ccc;
+}
+
+.login-account a:visited {
+    color: none;
 }
 
 /* Number text (1/3 etc) */
@@ -728,6 +873,125 @@ input[type="date"] {
 @keyframes fade {
     from {opacity: .4}
     to {opacity: 1}
+}
+
+.title-header {
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+.place-name {
+    display: flex;
+    width: 279px;
+    font-family: "Song Myung", sans-serif;
+    font-size: x-large;
+    margin-bottom: 5%;
+}
+
+.cottage1 {
+    width: 279px;
+    height: 279px;
+    border-radius: 10px;
+}
+
+.review-tile {
+    font-family: "Song Myung", sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.rating-score {
+    background-color: var(--color-review);
+    color: var(--color-black);
+    font-size: 25px;
+    padding: 10px 10px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.description {
+    width: 264px;
+    font-family: "Song Myung", sans-serif;
+    margin-top: 5%;
+}
+
+.rating-reviews {
+    color: var(--color-black);
+    font-size: 1rem;
+}
+
+.user-and-bath-icon {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    align-items: space-between;
+
+}
+
+.user-icon, .bath-icon, .main-price {
+    display: flex;
+    align-items: space-between;
+    gap: 8px;
+    font-size: 1.2rem;
+    color: var(--color-black);
+}
+
+.main-page-tile {
+    display: flex;
+    gap: 8px;
+    margin-top: 2%;
+    width: 558px;
+    height: 279px;
+}
+
+.tiles-main-page {
+    display: flex;
+    justify-content: space-evenly;
+    gap: row-gap;
+}
+
+.main-page-tile:hover {
+    opacity: 80%;
+    border-color: var(--color-banner);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
 
 .title-header {
     display: flex;
