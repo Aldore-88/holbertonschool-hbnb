@@ -326,6 +326,7 @@ html {
 
 .log-in-button:hover {
     opacity: 100%;
+    cursor: pointer;
 }
 
 /* Register Button */
@@ -359,6 +360,7 @@ html {
 
 .register-button:hover {
     opacity: 100%;
+    cursor: pointer;
 }
 
 /* Slogan and Logo */
@@ -971,6 +973,7 @@ input[type="date"] {
 .main-page-tile:hover {
     opacity: 80%;
     border-color: var(--color-banner);
+    cursor: pointer;
 }
 
 /* Number text (1/3 etc) */
@@ -1107,6 +1110,7 @@ input[type="date"] {
 .main-page-tile:hover {
     opacity: 80%;
     border-color: var(--color-banner);
+    cursor: pointer;
 }
 
 
@@ -1154,6 +1158,7 @@ input[type="date"] {
 
 .log-in-button-listing:hover {
     opacity: 100%;
+    cursor: pointer;
 }
 
 /* Register Button */
@@ -1187,6 +1192,7 @@ input[type="date"] {
 
 .register-button-listing:hover {
     opacity: 100%;
+    cursor: pointer;
 }
 
 .listing-header {
