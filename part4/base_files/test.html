@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Banner Layout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Song+Myung&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-black: #000000;
+            --color-white: #ffffff;
+            --color-banner: #13284A;
+            --color-button: #45557B;
+            --color-background: #FFF7F5;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Outfit", sans-serif;
+            background-color: var(--color-background);
+        }
+
+        .banner {
+            background-color: var(--color-banner);
+            height: 88px;
+        }
+
+        .banner > .banner-container {
+            padding-left: 25px;
+            padding-top: 3px;
+            width: auto;
+            position: relative;
+            height: 88px;
+        }
+
+        .banner-image {
+            display: inline-block;
+            vertical-align: middle;
+            height: 88px;
+            line-height: 88px;
+        }
+
+        .banner-image img {
+            vertical-align: middle;
+        }
+
+        .lireg-button {
+            display: inline-block;
+            position: absolute;
+            right: 25px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .log-in-button {
+            display: inline-block;
+            width: 7.125rem;
+            height: 2.09rem;
+            border-radius: 1.75rem;
+            border: none;
+            background-color: var(--color-button);
+            color: var(--color-white);
+            opacity: 80%;
+            padding: 0 1rem;
+            box-sizing: border-box;
+            text-align: center;
+            font-weight: 640;
+            font-family: "Outfit", sans-serif;
+            margin-right: 0.5rem;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+
+        .log-in-button:hover {
+            opacity: 100%;
+        }
+
+        .register-button {
+            display: inline-block;
+            width: 7.125rem;
+            height: 2.027rem;
+            border-radius: 1.75rem;
+            border: none;
+            background-color: var(--color-white);
+            color: var(--color-black);
+            opacity: 70%;
+            padding: 0 0.813rem;
+            box-sizing: border-box;
+            text-align: center;
+            font-weight: 600;
+            font-family: "Outfit", sans-serif;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+
+        .register-button:hover {
+            opacity: 100%;
+        }
+
+        /* Demo content below banner */
+        /* .demo-content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .demo-content h2 {
+            font-family: "Song Myung", serif;
+            margin-bottom: 10px;
+        }
+
+        .layout-description {
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: left;
+        } */
+    </style>
+</head>
+<body>
+    <header id="Banner" class="header" data-section-theme="dark">
+        <!-- Banner Section -->
+        <section>
+            <div class="banner">
+                <div class="banner-container">
+                    <div class="banner-image">
+                        <a href="index.html">
+                            <!-- Using a stock nest/home logo image -->
+                            <img src="images/Nest_logo.png" width="80" height="80" alt="Nest Logo">
+                        </a>
+                    </div>
+                    <!-- Login/Register -->
+                    <div class="lireg-button">
+                        <!-- Log in button -->
+                        <button class="log-in-button" onclick="alert('Login clicked')">Log in</button>
+                        <!-- Register button -->
+                        <button class="register-button" onclick="alert('Register clicked')">Register</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <!-- <div class="demo-content">
+        <h2>Final Banner Layout</h2>
+        <p>This is how your banner will look with the changes applied.</p>
+        
+        <div class="layout-description">
+            <h3>Layout Features:</h3>
+            <ul>
+                <li><strong>Logo:</strong> Positioned on the left side, vertically centered</li>
+                <li><strong>Login/Register buttons:</strong> Positioned on the right side, vertically centered</li>
+                <li><strong>No flexbox:</strong> Uses inline-block and absolute positioning</li>
+                <li><strong>Responsive:</strong> Buttons stay on the right regardless of screen size</li>
+                <li><strong>Height:</strong> Fixed 88px banner height</li>
+                <li><strong>Background:</strong> Dark blue (#13284A) banner background</li>
+            </ul>
+        </div>
+
+        <div class="layout-description">
+            <h3>Button Styling:</h3>
+            <ul>
+                <li><strong>Login button:</strong> Blue background with white text</li>
+                <li><strong>Register button:</strong> White background with black text</li>
+                <li><strong>Hover effects:</strong> Opacity changes on hover</li>
+                <li><strong>Rounded corners:</strong> Both buttons have rounded edges</li>
+                <li><strong>Spacing:</strong> Small gap between the two buttons</li>
+            </ul>
+        </div>
+    </div> -->
+</body>
+</html>
