@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <div class="page-container">
+            <section class="left">
+                <div class="reg-nest-container">
+                    <img src="images/nest_logo_cropped.png" alt="nest" class="reg-nest-square">
+                </div>
+                <div class="login-main">
+                    <p>YOUR STAY STARTS HERE...</p>
+                    <h1 id="login-head">Join Nest</h1>
+                    <form id="login-form">
+                        <div class="names">
+                            <span class="fn-container">
+                                <p class="field-title">First Name</p>
+                                <div class="input-container-log">
+                                    <img class="log-icon" src="images/name_icon.png" alt="name icon">
+                                    <input class="form-field" type="name" id="fn" name="first name" placeholder="First Name" required>
+                                </div>
+                            </span>
+                            <span class="ln-container">
+                                <p class="field-title">Last Name</p>
+                                <div class="input-container-log">
+                                    <img class="log-icon" src="images/name_icon.png" alt="name icon">
+                                    <input class="form-field" type="name" id="ln" name="last name" placeholder="Last Name" required>
+                                </div>
+                            </span>
+                        </div>
+
+                        <div class="field-container">
+                            <p class="field-title">Email</p>
+                            <div class="input-container-log">
+                                <img class="log-icon" src="images/email_icon.png" alt="email icon">
+                                <input class="form-field" type="email" id="email" name="email" placeholder="Your Email" required>
+                            </div>
+                        </div>
+
+                        <div class="field-container">
+                            <p class="field-title">Password</p>
+                            <div class="input-container-log">
+                                <img class="log-icon" src="images/key_icon.png" alt="email icon">
+                                <input class="form-field" type="password" id="password" name="password" placeholder=" Your Password" required>
+                                <img class="toggle-password" src="images/eye_icon.png" alt="toggle password">
+                            </div>
+                        </div>
+
+                        <div class="field-container">
+                            <p class="field-title">Re-enter Password</p>
+                            <div class="input-container-log">
+                                <img class="log-icon" src="images/key_icon.png" alt="email icon">
+                                <input class="form-field" type="password" id="password" name="re-enter-password" placeholder=" Re-enter Password" required>
+                                <img class="toggle-password" src="images/eye_icon.png" alt="toggle password">
+                            </div>
+                        </div>
+
+                        <button class="login-button" type="submit">Register</button>
+                    </form>
+                    <div class="login-with-reg">
+                        <hr>
+                        <span>Or login with</span>
+                        <hr>
+                    </div>
+                    <div class="social-icon">
+                        <img src="images/fb_icon.png" alt="Facebook" class="Facebook">
+                        <img src="images/x_icon.png" alt="Facebook" class="Facebook">
+                        <img src="images/google_icon.png" alt="Facebook" class="Facebook">
+                        <img src="images/apple_icon.png" alt="Facebook" class="Facebook">
+                    </div>
+                </div>
+                <div class="login-account">
+                    <span>Returning to Nest? <a href="login.html">Log into Account</a></span>
+                </div>
+            </section>
+
+            <section class="right">
+                <div class="slideshow">
+                    <img src="images/login_slide1.png" alt="Slideshow image" />
+                </div>
+            </section>
+        </div>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>
