@@ -10,7 +10,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Song+Myung&display=swap"
             rel="stylesheet">
-        <link rel="stylesheet" href="styles.css">
+        <!-- <link rel="stylesheet" href="styles.css"> -->
+        <link rel="stylesheet" href="styles-place.css">
     </head>
 
     <body>
@@ -20,37 +21,24 @@
                 <div class="banner">
                     <div class="banner-container">
                         <div class="banner-image">
-                                <a href="index.html">
-                                    <img src="images/Nest_logo.png" width="80" height="80" alt="Nest Logo">
-                                </a>
+                            <a href="index.html">
+                                <img src="images/Nest_logo.png" width="80" height="80" alt="Nest Logo">
+                            </a>
                         </div>
-                        <!-- <nav class="nav-bar">
-                            <ul class="row">
-                                <li class="col-1-2">
-                                    <div class="card-work">
-                                        <h3 class="card-title">
-                                            <a href="">Login</a>
-                                        </h3>
-                                    </div>
-                                </li>
-                                <li class="col-1-2">
-                                    <div class="card-work">
-                                        <h3 class="card-title">
-                                            <a href="">Register</a>
-                                        </h3>
-                                    </div>
-                                </li>
-                            </ul>
-                        </nav> -->
-                    </div>
-
+                        <!-- Login/Register -->
+                        <div class="lireg-button">
+                            <!-- Log in button -->
+                            <button class="log-in-button" onclick="alert('Login clicked')">Log in</button>
+                            <!-- Register button -->
+                            <button class="register-button" onclick="alert('Register clicked')">Register</button>
+                        </div>  
                     </div>
                 </div>
             </section>
         </header>
 
         <!-- listing information and carosel -->
-        <section id="listing" class="section">
+        <section id="listing_info" class="section">
             <div class="container">
                 <header class="listing-header">
                     <h2>
@@ -62,12 +50,21 @@
                 <div class="section-body">
                     <div class="row">
                         <div class="col-1-2">
+                            <h3>
+                                This is the listing infromation
+                            </h3>
                             <p>
                                 listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information 
                             </p>
+                            <h3>
+                                This is the amenities header
+                            </h3>
+                            <p>
+                                amenities information amenities information amenities information amenities information amenities information amenities information amenities information amenities information
+                            </p>
                         </div>
-                        <div class="col-1-2">
                             <!-- Slideshow container -->
+                        <div id="carousel_container" class="col-1-2">
                             <div class="slideshow-container">
 
                             <!-- Full-width images with number and caption text -->
@@ -110,12 +107,40 @@
 
         <!-- place details and about host -->
         <section>
-            hello
             <div class="container">
                     <div class="row">
                         <div class="col-1-2">
-                            <div class="place_details">
-                                place details place details place details place details place details place details 
+                            <div class="place_cost">
+                                <div class="row">
+                                    <div class="col-filter">
+                                        <div id="place-cico" class="row">
+                                            <div class="cicog-button">
+                                                <span class="cico-label">Check-in</span> <!-- THIS ISNT SHOWING??? -->
+                                                <img class="icon" src="images/calender_icon.png" alt="calender icon">
+                                                <input class="cicog-input" type="date" id="checkin" name="CheckIn"
+                                                placeholder="Add Check-in" required>
+                                            </div>
+                                            <!-- Check-out button-->
+                                            <div class="cicog-button">
+                                                <span class="cico-label">Check-out</span>
+                                                <img class="icon" src="images/calender_icon.png" alt="calender icon">
+                                                <input class="cicog-input" type="date" id="checkout" name="CheckOut"
+                                                    placeholder="Add Check-out" require>
+                                            </div>
+                                            <div id="place-guest" class="cicog-button">
+                                                <img class="icon" src="images/user_icon.png" alt="user icon">
+                                                <input class="cicog-input" type="number" id="guests" name="Guests"
+                                                    placeholder="Add Guest(s)" require>
+                                            </div>
+                                            <div class="reserve-button">
+                                                <button>reserve button</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-price">
+                                        right
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="col-1-2">
@@ -136,6 +161,60 @@
                 </div>
         </section>
 
+        <!-- Reviews -->
+        <section>
+            <div id="Reviews_header" class="section_header">
+            </div>
+            <div id="review_top" class="row">
+                <div class="col-1-3">
+                    <h4 id="Review_1">
+                        Review 1
+                    </h4>
+                    <p>
+                        Need to make these in the middle
+                    </p>
+                </div>
+                <div class="col-1-3">
+                    <h4 id="Review_2">
+                        Review 2
+                    </h4>
+                </div>
+                <div class="col-1-3">
+                    <h4 id="Review_3">
+                        Review 3
+                    </h4>
+                </div>
+            </div>
+
+            <div id="review_bottom" class="row">
+                <div class="col-1-3">
+                    <h4 id="Review_4">
+                        Review 4
+                    </h4>
+                </div>
+                <div class="col-1-3">
+                    <h4 id="Review_5">
+                        Review 5
+                    </h4>
+                    
+                </div>
+                <div class="col-1-3">
+                    <h4 id="Review_6">
+                        Review 6
+                    </h4>
+                </div>
+            </div>
+
+        </section>
+        <!-- Leave a review -->
+        <section id="add-review">
+            <h2>Add a Review</h2>
+            <form id="review-form">
+                <label for="review-text">Review:</label>
+                <textarea id="review-text" name="review-text" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
         <!-- JS for image carosel -->
         <script>
             let slideIndex = 1;

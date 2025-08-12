@@ -1,0 +1,744 @@
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%
+}
+
+body {
+    margin: 0
+}
+
+main {
+    display: block
+}
+
+h1 {
+    font-size: 2em;
+    margin: .67em 0
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible
+}
+
+pre {
+    font-family: monospace, monospace;
+    font-size: 1em
+}
+
+a {
+    background-color: transparent
+}
+
+abbr[title] {
+    border-bottom: none;
+    text-decoration: underline;
+    text-decoration: underline dotted
+}
+
+b,
+strong {
+    font-weight: bolder
+}
+
+code,
+kbd,
+samp {
+    font-family: monospace, monospace;
+    font-size: 1em
+}
+
+small {
+    font-size: 80%
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline
+}
+
+sub {
+    bottom: -.25em
+}
+
+sup {
+    top: -.5em
+}
+
+img {
+    border-style: none
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0
+}
+
+button,
+input {
+    overflow: visible
+}
+
+button,
+select {
+    text-transform: none
+}
+
+[type=button],
+[type=reset],
+[type=submit],
+button {
+    -appearance: button
+}
+
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner,
+button::-moz-focus-inner {
+    border-style: none;
+    padding: 0
+}
+
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring,
+button:-moz-focusring {
+    outline: 1px dotted ButtonText
+}
+
+fieldset {
+    padding: .35em .75em .625em
+}
+
+legend {
+    box-sizing: border-box;
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    padding: 0;
+    white-space: normal
+}
+
+progress {
+    vertical-align: baseline
+}
+
+textarea {
+    overflow: auto
+}
+
+[type=checkbox],
+[type=radio] {
+    box-sizing: border-box;
+    padding: 0
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+    height: auto
+}
+
+[type=search] {
+    -appearance: textfield;
+    outline-offset: -2px
+}
+
+[type=search]::-webkit-search-decoration {
+    -webkit-appearance: none
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit
+}
+
+details {
+    display: block
+}
+
+summary {
+    display: list-item
+}
+
+template {
+    display: none
+}
+
+[hidden] {
+    display: none
+}
+
+/*# sourceMappingURL=normalize.min.css.map */
+
+/* Imported Fonts */
+.outfit-font-regular {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.song-myung-regular {
+    font-family: "Song Myung", serif;
+    font-style: normal;
+}
+
+
+html {
+    scroll-behavior: smooth;
+    background-color: var(--color-background);
+}
+
+/* root */
+:root {
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --color-beige: #EDE0D7;
+    --color-grey: #6D6D6D;
+    --color-banner: #13284A;
+    --color-button: #45557B;
+    --color-button-light: #D1D4DB;
+    --color-background: #FFF7F5;
+
+    --color-brown: #E2C7B8;
+    --color-light-brown: #EDE0D7;
+
+    --text-color: var(--color-black);
+
+    --font-family-base: "Song Myung";
+    --font-serif: "Song Myung";
+    --font-sans-serif: "Outfit";
+    --font-size-small: 1.2rem;
+    --font-size-medium: 1.6rem;
+    --font-size-large: 1.8rem;
+    --font-size-x-large: 2.3rem;
+    --font-size-xx-large: 4.8rem;
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+
+    --line-height-small: 1.2;
+    --line-height-base: 1.5;
+    --line-height-big: 1.8;
+
+    --review-background-rating: var(--color-brown);
+    --place-filter-background: var(--color-light-brown);
+
+    --button-display: inline-block;
+    --button-padding: 1.5rem 3rem;
+    --button-border: 0.2rem solid var(--color-primary);
+    --button-color: var(--color-black);
+    --button-color-login: var(--color-button);
+    --button-color-register: var(--color-button-light)
+    --button-text-decoration: none;
+    --button-font-size: var(--font-size-large);
+    --button-hover-color: var(--color-white);
+    --button-hover-text-decoration: none;
+    --button-hover-background: var(--color-primary);
+
+}
+
+/* header tags */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-serif);
+    margin:0px;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+*,*:before,*:after{
+    box-sizing: border-box;
+}
+.row{
+    font-size: 0;
+}
+
+.col-1-2{
+    width: 50%;
+    background-color: rgba(150, 150, 0, 0.3);
+}
+
+.col-1-3{
+    width: 33.33%;
+    background-color: rgba(200, 200, 200, 1);
+}
+
+.col-2-3{
+    width: 66.67%;
+    background-color: rgba(200, 100, 200, 1);
+}
+
+.col-filter{
+    width: 60%;
+    background-color: rgba(150, 150, 0, 0.3);
+}
+
+.col-price{
+    width: 40%;
+    background-color: rgba(150, 150, 0, 0.3);
+}
+
+.container{
+    /* width: 900px; */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: rgba(100,0,100,0.5);
+}
+
+[class^="col-"]{
+    display: inline-block;
+    padding: 0.5rem;
+    vertical-align: top;
+    font-size: 1rem;
+}
+
+.place_cost{
+    text-align:left;
+}
+
+.about_host-details{
+    text-align:left;
+}
+
+.about_host-icon img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.banner{
+    background-color: var(--color-banner);
+    height: 88px;
+}
+
+.banner > .banner-container{
+    padding-left: 25px;
+    padding-top: 3px;
+    width: auto;
+    position: relative;
+    height: 88px;
+}
+
+.bg {
+    color: var(--color-white);
+    background-image: url("images/cottage_lp.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 90vh;
+    position: static;
+}
+
+
+        .lireg-button {
+            display: inline-block;
+            position: absolute;
+            right: 25px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+
+/* Log-in Button */
+.li-button {
+    /* display: flex;
+    border-radius: 0.563rem;
+    font-family: "Outfit", sans-serif;
+    font-size: 1rem; */
+    display: inline-block;
+}
+
+.log-in-button {
+    display: inline-block;
+    width: 7.125rem;
+    height: 2.09rem;
+    border-radius: 1.75rem;
+    border: none;
+    background-color: var(--color-button);
+    color: var(--color-white);
+    opacity: 80%;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: 640;
+    font-family: "Outfit", sans-serif;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.log-in-button:hover {
+    opacity: 100%;
+}
+
+/* Register Button */
+.reg-button {
+    display: flex;
+    border-radius: 0.563rem;
+    font-family: "Outfit", sans-serif;
+    font-size: 1rem;
+}
+
+.register-button {
+    display: inline-block;
+    width: 7.125rem;
+    height: 2.027rem;
+    border-radius: 1.75rem;
+    border: none;
+    background-color: var(--color-white);
+    color: var(--color-black);
+    opacity: 70%;
+    padding: 0 0.813rem;
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: 600;
+    font-family: "Outfit", sans-serif;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.register-button:hover {
+    opacity: 100%;
+}
+
+/* Slogan and Logo */
+.text {
+    width: 17%;
+    border-radius: 0.563rem;
+    position: absolute;
+    top: 15%;
+    left: 25%;
+    font-family: "Song Myung", sans-serif;
+    font-size: 1.688rem;
+}
+
+.text>.cozy {
+    margin-bottom: 10px;
+}
+
+.text>.just {
+    float: left;
+}
+
+.text>.nest {
+    width: 80%;
+    float: right;
+}
+
+.text>.nest>.image {
+    width: 8.5rem;
+    height: 4.875rem;
+    display: inline-block;
+    background-image: url(./images/Nest_logo.png);
+    background-size: 9.375rem 9.375rem;
+    background-position: 0px -1.438rem;
+}
+
+.text>.away {
+    float: left;
+}
+
+.text>.buttons {
+    clear: both;
+}
+
+.input-fields {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: row;
+    align-content: space-between;
+    gap: 1.25rem;
+    margin-top: -2%;
+}
+
+/* Search Destination Input */
+.search-destination {
+    width: 13.25rem;
+    height: 3.5rem;
+    border-radius: 1.75rem;
+    border: none;
+    background-color: var(--color-white);
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    gap: 8px;
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    font-size: 0.75rem;
+    width: 100%;
+    background: transparent;
+    color: var(--color-black);
+}
+
+.search-input::placeholder {
+    color: var(--color-black);
+}
+
+/* Check-In Check-Out Guest Input */
+.cicog-button {
+    width: 9.375rem;
+    height: 3.5rem;
+    border-radius: 1.75rem;
+    border: none;
+    background-color: var(--color-white);
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    gap: 0.5rem;
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+    text-align: left;
+}
+
+#place-cico .cicog-button {
+    /* scale: 90%; */
+    display: inline-block;
+    margin: 0.1rem;
+}
+
+#place-cico .cicog-button .cicog-input {
+    width:80%;
+}
+
+#place-cico #place-guest{
+    width: 100%;
+}
+
+.cicog-input {
+    border: none;
+    outline: none;
+    font-size: 0.75rem;
+    width: 100%;
+    background: transparent;
+    color: var(--color-black);
+}
+
+.cicog-input::placeholder {
+    color: var(--color-black);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+input[type="date"] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+/* Search Input Button */
+.search-button {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--color-white);
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+}
+
+.icon {
+    width: 1.125rem;
+    height: 1.125rem;
+    object-fit: contain;
+    position: static;
+}
+
+/* List page - image carosel */
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 500px;
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+.title-header {
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+.place-name {
+    display: flex;
+    width: 279px;
+    font-family: "Song Myung", sans-serif;
+    font-size: x-large;
+    margin-bottom: 5%;
+}
+
+.cottage1 {
+    width: 279px;
+    height: 279px;
+    border-radius: 10px;
+}
+
+.review-tile {
+    font-family: "Song Myung", sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.rating-score {
+    background-color: var(--color-review);
+    color: var(--color-black);
+    font-size: 25px;
+    padding: 10px 10px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.description {
+    width: 264px;
+    font-family: "Song Myung", sans-serif;
+    margin-top: 5%;
+}
+
+.rating-reviews {
+    color: var(--color-black);
+    font-size: 1rem;
+}
+
+.user-and-bath-icon {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    align-items: space-between;
+    
+}
+
+.user-icon, .bath-icon, .main-price {
+    display: flex;
+    align-items: space-between;
+    gap: 8px;
+    font-size: 1.2rem;
+    color: var(--color-black);
+}
+
+.main-page-tile {
+    display: flex;
+    gap: 8px;
+    margin-top: 2%;
+    width: 558px;
+    height: 279px;
+}
+
+.tiles-main-page {
+    display: flex;
+    justify-content: space-evenly;
+    gap: row-gap;
+}
+
+.main-page-tile:hover {
+    opacity: 80%;
+    border-color: var(--color-banner);
+}
