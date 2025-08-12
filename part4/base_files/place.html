@@ -122,10 +122,29 @@
                         <div class="col-1-2">
                             <div class="place_cost">
                                 <div class="row">
-                                    <div class="col-1-2">
-                                        left
+                                    <div class="col-filter">
+                                        <div id="place-cico" class="row">
+                                            <div class="cicog-button">
+                                                <span class="cico-label">Check-in</span> <!-- THIS ISNT SHOWING??? -->
+                                                <img class="icon" src="images/calender_icon.png" alt="calender icon">
+                                                <input class="cicog-input" type="date" id="checkin" name="CheckIn"
+                                                placeholder="Add Check-in" required>
+                                            </div>
+                                            <!-- Check-out button-->
+                                            <div class="cicog-button">
+                                                <span class="cico-label">Check-out</span>
+                                                <img class="icon" src="images/calender_icon.png" alt="calender icon">
+                                                <input class="cicog-input" type="date" id="checkout" name="CheckOut"
+                                                    placeholder="Add Check-out" require>
+                                            </div>
+                                            <div id="place-guest" class="cicog-button">
+                                                <img class="icon" src="images/user_icon.png" alt="user icon">
+                                                <input class="cicog-input" type="number" id="guests" name="Guests"
+                                                    placeholder="Add Guest(s)" require>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="col-1-2">
+                                    <div class="col-price">
                                         right
                                     </div>
                                 </div>

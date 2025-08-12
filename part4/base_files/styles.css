@@ -270,6 +270,7 @@ html {
 .row{
     font-size: 0;
 }
+
 .col-1-2{
     width: 50%;
     background-color: rgba(150, 150, 0, 0.3);
@@ -283,6 +284,16 @@ html {
 .col-2-3{
     width: 66.67%;
     background-color: rgba(200, 100, 200, 1);
+}
+
+.col-filter{
+    width: 60%;
+    background-color: rgba(150, 150, 0, 0.3);
+}
+
+.col-price{
+    width: 40%;
+    background-color: rgba(150, 150, 0, 0.3);
 }
 
 .container{
@@ -504,6 +515,21 @@ html {
     gap: 0.5rem;
     box-sizing: border-box;
     font-family: "Outfit", sans-serif;
+    text-align: left;
+}
+
+#place-cico .cicog-button {
+    /* scale: 90%; */
+    display: inline-block;
+    margin: 0.1rem;
+}
+
+#place-cico .cicog-button .cicog-input {
+    width:80%;
+}
+
+#place-cico #place-guest{
+    width: 100%;
 }
 
 .cicog-input {
