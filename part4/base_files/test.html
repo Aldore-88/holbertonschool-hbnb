@@ -127,8 +127,8 @@
         display: grid;
         grid-template-areas:
             "check-in check-out"
-            "num_guests num_guests"
-            "reserve reserve";
+            "guest-container guest-container"
+            "reserve-button reserve-button";
         grid-template-columns: 1fr 1fr;
         gap: 5px;
         background-color: #2196F3;
@@ -140,11 +140,11 @@
         padding: 10px;
         }
 
-        .cico-container > div.num_guests {
-        grid-area: num_guests;
+        .cico-container > div.guest-container {
+        grid-area: guest-container;
         }
-        .cico-container > button.reserve {
-        grid-area: reserve;
+        .cico-container > button.reserve-button {
+        grid-area: reserve-button;
         }
 
         [class^="check"]{
@@ -170,11 +170,43 @@
             grid-area: check-out;
         }
 
-        .cico-container > div img {
+        .cico-container > [class^="check"] img {
             width: 18px;
             display: inline-block;
             padding-top: 25%;
             align-items: center;
+        }
+
+        .guest-container {
+            align-items: center;
+            border-radius: 1.75rem;
+            width: 20rem;
+            padding:0;
+            text-align: center;
+        }
+
+        .guest-container > .guest-icon{
+            display:inline-block;
+            width: 5%;
+            padding:0;
+            margin:0;
+            vertical-align: middle;
+        }
+
+        .guest-container > .guest-icon img{
+            width: 18px;
+            display: block;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            /* vertical-align: middle; */
+        }
+
+        .guest-select {
+            display: inline-block;
+            width: 60%;
+            margin-left:5%;
+            /* vertical-align: middle; */
         }
 
         [class^="check"] > .cal-icon{
@@ -196,6 +228,7 @@
             margin-left: 5%;
             margin-top: 0;
         }
+
         .cicog-input {
             border: none;
             outline: none;
@@ -204,6 +237,30 @@
             background: transparent;
             color: var(--color-black);
         }
+
+        .reserve-button{ /*167.19 40.77*/
+            display: block;
+            height: 2.548rem;
+            /* width: 50%; */
+            border: none;
+            border-radius: 1.75rem;
+            background-color: #45557B;
+            color: var(--color-background);
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+/* 
+        input[type="date"] {
+            position: absolute;
+            opacity: 10%;
+
+            &::-webkit-calendar-picker-indicator {
+                position: absolute;
+                width: 100%;
+                height:100%;
+                background-color: #000000;
+            }
+        } */
     </style>
 </head>
 <body>
@@ -252,11 +309,16 @@
                         <input id="dateInput" class="cicog-input" type="date" id="checkin" name="CheckIn" placeholder="Add Check-in" required>
                     </div>
                 </div>
-                <div class="num_guests">
-                    num guests
+                <div class="guest-container">
+                    <div class="guest-icon">
+                        <img src="images/user_icon.png">
+                    </div>
+                    <div class="guest-select">
+                        <input id="guest-select" class="cicog-input" type="number" id="guests" name="Guests" placeholder="Add Guest(s)" require>
+                    </div>
                 </div>
-                <button class="reserve">
-                    reserve
+                <button class="reserve-button">
+                    Reserve
                 </button>
             </div>
         </section>
