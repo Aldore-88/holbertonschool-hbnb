@@ -28,9 +28,9 @@
                         <!-- Login/Register -->
                         <div class="lireg-button">
                             <!-- Log in button -->
-                            <button class="log-in-button" onclick="alert('Login clicked')">Log in</button>
+                            <button class="log-in-button" onclick="window.location.href='login.html'">Log in</button>
                             <!-- Register button -->
-                            <button class="register-button" onclick="alert('Register clicked')">Register</button>
+                            <button class="register-button" onclick="window.location.href='register.html'">Register</button>
                         </div>  
                     </div>
                 </div>
@@ -41,49 +41,77 @@
         <section id="listing_info" class="section">
             <div class="container">
                 <header class="listing-header">
-                    <h2>
-                        Listing here!
-                    </h2>
                 </header>
                 <div class="container">
-                    listing information and carosel
-                <div class="section-body">
-                    <div class="row">
-                        <div class="col-1-2">
-                            <h3>
-                                This is the listing infromation
-                            </h3>
-                            <p>
-                                listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information 
-                            </p>
-                            <h3>
-                                This is the amenities header
-                            </h3>
-                            <p>
-                                amenities information amenities information amenities information amenities information amenities information amenities information amenities information amenities information
-                            </p>
-                        </div>
+                    <div class="section-body">
+                        <div class="row">
+                            <div class="col-1-2">
+                                <h1>
+                                    Cottage in Zermatt, Switzerland.
+                                </h1>
+                                    <!-- Amenities -->
+                                    <div class="amenities-rating-container row">
+                                        <div class="amenities">
+                                            <div class="user-icon">
+                                                <img src="images/user_icon.png">
+                                                <span>2</span>
+                                            </div>
+                                            <div class="bed-icon">
+                                                <img src="images/bed_icon.png">
+                                                <span>2</span>
+                                            </div>
+                                            <div class="bath-icon">
+                                                <img src="images/bath_icon.png">
+                                                <span>2</span>
+                                            </div>
+                                            <div class="car-icon">
+                                                <img src="images/car_icon.png">
+                                                <span>2</span>
+                                            </div>
+                                        </div>
+                                        <!-- Rating & reviews -->
+                                        <div class="place-rating-review">
+                                            <div class="row">
+                                                <div class="rating">
+                                                    9.1
+                                                </div>
+                                                <div class="num-reviews">
+                                                    305 reviews
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <h3>
+                                    This is the listing infromation
+                                </h3>
+                                <p>
+                                    listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information listing information 
+                                </p>
+                                <h3>
+                                    This is the amenities header
+                                </h3>
+                                <p>
+                                    amenities information amenities information amenities information amenities information amenities information amenities information amenities information amenities information
+                                </p>
+                            </div>
                             <!-- Slideshow container -->
-                        <div id="carousel_container" class="col-1-2">
-                            <div class="slideshow-container">
+                            <div id="carousel_container" class="col-1-2">
+                                <div class="slideshow-container">
 
                             <!-- Full-width images with number and caption text -->
                             <div class="mySlides fade">
-                                <div class="numbertext">1 / 3</div>
+                                <!-- <div class="numbertext">1 / 3</div> -->
                                 <img src="images-stock/img1.png" style="width:100%">
-                                <div class="text">Caption Text</div>
                             </div>
 
                             <div class="mySlides fade">
-                                <div class="numbertext">2 / 3</div>
+                                <!-- <div class="numbertext">2 / 3</div> -->
                                 <img src="images-stock/img2.png" style="width:100%">
-                                <div class="text">Caption Two</div>
                             </div>
 
                             <div class="mySlides fade">
-                                <div class="numbertext">3 / 3</div>
+                                <!-- <div class="numbertext">3 / 3</div> -->
                                 <img src="images-stock/img3.png" style="width:100%">
-                                <div class="text">Caption Three</div>
                             </div>
 
                             <!-- Next and previous buttons -->
@@ -91,7 +119,6 @@
                             <a class="next" onclick="plusSlides(1)">&#10095;</a>
                             </div>
                             <br>
-
                             <!-- The dots/circles -->
                             <div style="text-align:center">
                             <span class="dot" onclick="currentSlide(1)"></span>
@@ -108,57 +135,91 @@
         <!-- place details and about host -->
         <section>
             <div class="container">
-                    <div class="row">
-                        <div class="col-1-2">
-                            <div class="place_cost">
-                                <div class="row">
-                                    <div class="col-filter">
-                                        <div id="place-cico" class="row">
-                                            <div class="cicog-button">
-                                                <span class="cico-label">Check-in</span> <!-- THIS ISNT SHOWING??? -->
-                                                <img class="icon" src="images/calender_icon.png" alt="calender icon">
-                                                <input class="cicog-input" type="date" id="checkin" name="CheckIn"
-                                                placeholder="Add Check-in" required>
-                                            </div>
-                                            <!-- Check-out button-->
-                                            <div class="cicog-button">
-                                                <span class="cico-label">Check-out</span>
-                                                <img class="icon" src="images/calender_icon.png" alt="calender icon">
-                                                <input class="cicog-input" type="date" id="checkout" name="CheckOut"
-                                                    placeholder="Add Check-out" require>
-                                            </div>
-                                            <div id="place-guest" class="cicog-button">
-                                                <img class="icon" src="images/user_icon.png" alt="user icon">
-                                                <input class="cicog-input" type="number" id="guests" name="Guests"
-                                                    placeholder="Add Guest(s)" require>
-                                            </div>
-                                            <div class="reserve-button">
-                                                <button>reserve button</button>
-                                            </div>
-                                        </div>
+                <div class="row">
+                    <div class="col-1-2">
+                        <div class="booking-grid">
+                            <div class="cico-container">
+                                <div class="check-in">
+                                    <div class="cal-icon">
+                                        <img src="images/calender_icon.png">
                                     </div>
-                                    <div class="col-price">
-                                        right
+                                    <div class="text-top">
+                                        Check-in
                                     </div>
+                                    <div class="text-bottom">
+                                        <input id="dateInput" class="cicog-input" type="date" id="checkin" name="CheckIn" placeholder="Add Check-in" required>
+                                    </div>
+                                </div>
+                                <div class="check-out">
+                                    <div class="cal-icon">
+                                        <img src="images/calender_icon.png">
+                                    </div>
+                                    <div class="text-top">
+                                        Check-out
+                                    </div>
+                                    <div class="text-bottom">
+                                        <input id="dateInput" class="cicog-input" type="date" id="checkin" name="CheckIn" placeholder="Add Check-in" required>
+                                    </div>
+                                </div>
+                                <div class="guest-container">
+                                    <div class="guest-icon">
+                                        <img src="images/user_icon.png">
+                                    </div>
+                                    <div class="guest-select">
+                                        <input id="guest-select" class="cicog-input" type="number" id="guests" name="Guests" placeholder="Add Guest(s)" require>
+                                    </div>
+                                </div>
+                            <button class="reserve-button">
+                                <h5>Reserve</h5>
+                            </button>
+                            </div>
+                            <!-- price -->
+                            <div class="price-container">
+                                <h3>Price Details</h3>
+                                <div class="price-item">
+                                    <span>Price per night</span>
+                                    <span>$420.00</span>
+                                </div>
+                                <div class="price-item">
+                                    <span>2 nights at</span>
+                                    <span>$840.00</span>
+                                </div>
+                                <div class="price-item tax">
+                                    <span>Taxes and fees</span>
+                                    <span>$15</span>
+                                </div>
+                                <div class="price-item insurance">
+                                    <span>Insurance</span>
+                                    <span>$15</span>
+                                </div>
+                                <div class="price-item total">
+                                    <span>Total</span>
+                                    <span>$400</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-1-2">
-                            <div class="row">
-                                <div class="col-2-3">
-                                    <div class="about_host-details">
-                                        about host about host about hostabout host about host
-                                    </div>
+                    </div>
+                    <div class="col-1-2">
+                        <div class="row">
+                            <div class="col-2-3">
+                                <div class="about_host-header">
+                                    <h2>
+                                        About Host
+                                    </h2>
                                 </div>
-                                <div class="col-1-3">
-                                    <div class="about_host-icon">
-                                        <img src="images/user_icon.png">
-                                    </div>
+                                <div class="about_host-details">
+                                    about host about host about host about host about host about host about host about host about host about host about host about host about host about host about host about host about host about host about host about host about host
+                                </div>
+                            </div>
+                            <div class="col-1-3">
+                                <div class="avatar about-host">
+                                    <img src="images-avatar/avatar-monkey.jpg">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
         </section>
 
         <!-- Reviews -->
@@ -167,41 +228,151 @@
             </div>
             <div id="review_top" class="row">
                 <div class="col-1-3">
-                    <h4 id="Review_1">
-                        Review 1
-                    </h4>
+                    <div class="review-header-container">
+                        <div class="row">
+                            <div class="review-icon">
+                                <div class="avatar review">
+                                    <img src="images-avatar/avatar-javiar.jpg">
+                                </div>
+                            </div>
+                            <div class="review-header">
+                                <h4 id="Review_1">
+                                    Review 1
+                                </h4>
+                            </div>
+                            <div class="review-icon">
+                                <div class="review-rating">
+                                    9.2
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <p>
-                        Need to make these in the middle
+                        review information here review information here review information here review information here review information here review information here review information here review information here review information here
                     </p>
                 </div>
                 <div class="col-1-3">
-                    <h4 id="Review_2">
-                        Review 2
-                    </h4>
+                    <div class="review-header-container">
+                        <div class="row">
+                            <div class="review-icon">
+                                <div class="avatar review">
+                                    <img src="images-avatar/avatar-ronald.jpg">
+                                </div>
+                            </div>
+                            <div class="review-header">
+                                <h4 id="Review_2">
+                                    Review 2
+                                </h4>
+                            </div>
+                            <div class="review-icon">
+                                <div class="review-rating">
+                                    9.2
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                        review information here review information here review information here review information here review information here review information here review information here review information here review information here
+                    </p>
                 </div>
                 <div class="col-1-3">
-                    <h4 id="Review_3">
-                        Review 3
-                    </h4>
+                    <div class="review-header-container">
+                        <div class="row">
+                            <div class="review-icon">
+                                <div class="avatar review">
+                                    <img src="images-avatar/avatar-grandma.jpg">
+                                </div>
+                            </div>
+                            <div class="review-header">
+                                <h4 id="Review_3">
+                                    Review 3
+                                </h4>
+                            </div>
+                            <div class="review-icon">
+                                <div class="review-rating">
+                                    9.2
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                        review information here review information here review information here review information here review information here review information here review information here review information here review information here
+                    </p>
                 </div>
             </div>
-
+            
             <div id="review_bottom" class="row">
                 <div class="col-1-3">
-                    <h4 id="Review_4">
-                        Review 4
-                    </h4>
+                    <div class="review-header-container">
+                        <div class="row">
+                            <div class="review-icon">
+                                <div class="avatar review">
+                                    <img src="images-avatar/avatar-einstein.jpg">
+                                </div>
+                            </div>
+                            <div class="review-header">
+                                <h4 id="Review_4">
+                                    Review 4
+                                </h4>
+                            </div>
+                            <div class="review-icon">
+                                <div class="review-rating">
+                                    9.2
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                        review information here review information here review information here review information here review information here review information here review information here review information here review information here
+                    </p>
                 </div>
                 <div class="col-1-3">
-                    <h4 id="Review_5">
-                        Review 5
-                    </h4>
-                    
+                    <div class="review-header-container">
+                        <div class="row">
+                            <div class="review-icon">
+                                <div class="avatar review">
+                                    <img src="images-avatar/avatar-transformer.jpg">
+                                </div>
+                            </div>
+                            <div class="review-header">
+                                <h4 id="Review_5">
+                                    Review 5
+                                </h4>
+                            </div>
+                            <div class="review-icon">
+                                <div class="review-rating">
+                                    9.2
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                        review information here review information here review information here review information here review information here review information here review information here review information here review information here
+                    </p>
                 </div>
                 <div class="col-1-3">
-                    <h4 id="Review_6">
-                        Review 6
-                    </h4>
+                    <div class="review-header-container">
+                        <div class="row">
+                            <div class="review-icon">
+                                <div class="avatar review">
+                                    <img src="images-avatar/avatar-bobjane.png">
+                                </div>
+                            </div>
+                            <div class="review-header">
+                                <h4 id="Review_6">
+                                    Review 6
+                                </h4>
+                            </div>
+                            <div class="review-icon">
+                                <div class="review-rating">
+                                    9.2
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                        review information here review information here review information here review information here review information here review information here review information here review information here review information here
+                    </p>
                 </div>
             </div>
 

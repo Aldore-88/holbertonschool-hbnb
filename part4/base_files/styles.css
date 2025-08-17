@@ -1208,6 +1208,7 @@ input[type="date"] {
     background-color: var(--color-banner);
     height: 88px;
 }
+
 .banner > .banner-container{
     padding-left: 25px;
     padding-top: 3px;
